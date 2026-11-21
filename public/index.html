@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trayectia — Reservas y Control de Emisión</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; background: #f8fafc; color: #0f172a; }
+    .banner { background: #fef3c7; color: #92400e; padding: 12px 14px; border-radius: 8px; margin-bottom: 18px; font-size: 14px; border: 1px solid #fde68a; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    input, button { padding: 8px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; }
+    button { background: #0f172a; color: #fff; cursor: pointer; border: none; }
+    button:hover { background: #1e293b; }
+    .alerta { background: #fee2e2; color: #991b1b; padding: 3px 8px; border-radius: 6px; font-weight: 600; }
+    .ok { background: #dcfce7; color: #166534; padding: 3px 8px; border-radius: 6px; font-weight: 600; }
+    .pend { background: #e0f2fe; color: #075985; padding: 3px 8px; border-radius: 6px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Trayectia</h1>
+  <div class="banner">
+    <strong>Entorno de prueba:</strong> Los cálculos (fee, recargo Addi 7,735% efectivo, $8.000 operativos y 15% fundación) y la cola de emisión son para validación; la emisión real se gestiona por canal B2B.
+  </div>
+
+  <div class="card">
+    <h3>Nueva reserva (Snapshot)</h3>
+    <form id="formReserva" class="row">
+      <input id="pasajero" placeholder="Nombre pasajero" required />
+      <input id="ruta" placeholder="Ruta (ej. BOG - MDE)" required />
+      <input id="tarifaBase" type="number" placeholder="Tarifa base COP" required />
+      <label style="display:flex;align-items:center;gap:6px;">
+        <input id="usarAddi" type="checkbox" checked /> Financiación Addi
+      </label>
+      <button type="submit">Crear reserva</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Cola de reservas</h3>
+    <div id="lista"></div>
+  </div>
+
+  <script>
+    async function cargarReservas() {
+      const res = await fetch('/api/reservas');
+      const data = await res.json();
+      const el = document.getElementById('lista');
+      if (!data.length) {
+        el.innerHTML = '<p>No hay reservas registradas aún.</p>';
+        return;
+      }
+      el.innerHTML = data.map(r => {
+        const badgeClass = r.estado === 'ALERTA_VARIACION_TARIFA' ? 'alerta' : (r.estado === 'EMITIDO' ? 'ok' : 'pend');
+        return `
+          <div style="border-top:1px solid #e2e8f0;padding:12px 0;">
+            <div><strong>${r.pnr}</strong> — ${r.pasajero} (${r.ruta}) — <span class="${badgeClass}">${r.estado}</span></div>
+            <div style="font-size:13px;color:#475569;margin-top:4px;">
+              Base: $${r.snapshot.tarifaBase.toLocaleString('es-CO')} |
+              Fee: $${r.snapshot.fee.toLocaleString('es-CO')} |
+              Addi: $${r.snapshot.recargoAddi.toLocaleString('es-CO')} |
+              Total cliente: $${r.snapshot.totalCliente.toLocaleString('es-CO')} |
+              Fundación (15%): $${r.snapshot.aporteFundacion.toLocaleString('es-CO')} |
+              Est. neto: $${r.snapshot.utilidadNetaEstimada.toLocaleString('es-CO')}
+              ${r.codigoAerolinea ? `| PNR Aéreo: <strong>${r.codigoAerolinea}</strong>` : ''}
+            </div>
+            <div class="row" style="margin-top:8px;">
+              <input type="number" id="val-${r.pnr}" placeholder="Tarifa actual COP" value="${r.tarifaActualValidada}" />
+              <button onclick="validar('${r.pnr}')">Validar tarifa</button>
+              <button onclick="emitir('${r.pnr}')">Marcar emitido</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('formReserva').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await fetch('/api/reservas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pasajero: document.getElementById('pasajero').value,
+          ruta: document.getElementById('ruta').value,
+          tarifaBase: Number(document.getElementById('tarifaBase').value),
+          usarAddi: document.getElementById('usarAddi').checked
+        })
+      });
+      e.target.reset();
+      document.getElementById('usarAddi').checked = true;
+      cargarReservas();
+    });
+
+    async function validar(pnr) {
+      const tarifaActual = Number(document.getElementById('val-' + pnr).value);
+      await fetch(`/api/reservas/${pnr}/validar-emision`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tarifaActual })
+      });
+      cargarReservas();
+    }
+
+    async function emitir(pnr) {
+      const res = await fetch(`/api/reservas/${pnr}/emitir`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+      const data = await res.json();
+      if (!res.ok) alert(data.error || 'No se pudo emitir');
+      cargarReservas();
+    }
+
+    cargarReservas();
+  </script>
+</body>
+</html>
