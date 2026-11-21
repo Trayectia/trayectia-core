@@ -1,3 +1,3075 @@
 {
-  "reservas": []
+  "bookings": [
+    {
+      "pnr": "TRX-C8ND7M",
+      "offerId": "FL-BOG-SAN ANDRÉS (ADZ)-3",
+      "amount": 175000,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T21:54:44.709Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-OZFCZP",
+      "offerId": "FL-BOG-MED-3",
+      "amount": 175000,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T21:55:02.846Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-WRE6C7",
+      "offerId": "FL-BOG-CTG-3",
+      "amount": 175000,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "andrescamilo.serna.m@gmail.com",
+      "createdAt": "2026-11-16T21:55:18.044Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-ZAQVMM",
+      "offerId": "TRX-BOG-CTG-3",
+      "amount": 178500,
+      "currency": "COP",
+      "paymentMethod": "SISTECREDITO",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T21:58:21.932Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-U8OVPD",
+      "offerId": "TRX-BOG-SAN ANDRÉS (ADZ)-3",
+      "amount": 262,
+      "currency": "USD",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T22:01:46.046Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-ZMY177",
+      "offerId": "TRX-BOG-CTG-2",
+      "amount": 252000,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T22:03:52.230Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-8UKTYQ",
+      "offerId": "TRX-BOG-CTG-1",
+      "amount": 210000,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T22:06:07.662Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-E8K3QT",
+      "offerId": "TRX-BOG-CTG-1",
+      "amount": 210000,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-16T22:07:21.566Z",
+      "status": "ISSUED"
+    },
+    {
+      "pnr": "TRX-4DVQOH",
+      "offerId": "off_034zzNmH6dVb57lBsEt0QC",
+      "amount": 430.29,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-18T23:46:04.942Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-TJA9CW",
+      "offerId": "off_034zzbYf7z7QGFgbNkyTk8",
+      "amount": 53.23,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-18T23:53:20.477Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-LSJW99",
+      "offerId": "off_034zzglpPqKE3QG0Qq5S2y",
+      "amount": 117.44,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-18T23:56:47.337Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-ORCZY5",
+      "offerId": "off_034zzh6d9E6sGDNONEJnxA",
+      "amount": 53.98,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "andrescamilo.serna.m@gmail.com",
+      "createdAt": "2026-11-18T23:57:10.187Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-JU167A",
+      "offerId": "off_034zzjhASd9s8JZkpwuHHU",
+      "amount": 54.1,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-18T23:58:43.208Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-64UKVT",
+      "offerId": "off_034zzkjW7ufeSYEEB6lhLs",
+      "amount": 441.72,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "createdAt": "2026-11-18T23:59:31.158Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-TNNWTC",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03502wq1IbD4ZislnkzOCW",
+      "amount": 53.77,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T02:09:34.076Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-I0E88J",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03502x5EQJhjN1laL8gLNA",
+      "amount": 52.83,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T02:09:44.195Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-TL2W11",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_035032Gl2MGaWyoVWZ19KS",
+      "amount": 53.85,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T02:13:08.577Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-33DECB",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_035032n47e0jobMIUjttLs",
+      "amount": 114.94,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T02:13:30.061Z",
+      "status": "PENDING_PAYMENT"
+    },
+    {
+      "pnr": "TRX-P0TTV4",
+      "userId": null,
+      "offerId": "off_03503DHQCJ13nT7fnoQIuu",
+      "amount": 52.59,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T02:20:23.138Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-QC3S6U",
+      "userId": null,
+      "offerId": "off_03503KwmThm5nQe481XzfM",
+      "amount": 53.18,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T02:25:24.850Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-PW02M6",
+      "userId": null,
+      "offerId": "off_03504EDE7B7HHH0dTolzY8",
+      "amount": 53.35,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T03:01:44.046Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-KHKF9L",
+      "userId": null,
+      "offerId": "off_03504H0M8XtUUMMkOQS7hw",
+      "amount": 114.65,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T03:03:35.300Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-SZH0HM",
+      "userId": null,
+      "offerId": "off_03504VbqBDHfoDfzkKk1LM",
+      "amount": 450.73,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T03:13:10.791Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-JPKKGO",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_035053C0xUKtVuORe0SKJs",
+      "amount": 53.07,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T03:35:14.629Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-YJB2F2",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03505Dtj0xSBFAAKPwjsCe",
+      "amount": 53.71,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T03:42:16.621Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-3DKIZZ",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03505NPqULGU8Q1LprkuSj",
+      "amount": 2810.84,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 2,
+      "createdAt": "2026-11-19T03:48:32.804Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-03KLY8",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03505azQ6rqP1dv0B0k5Ni",
+      "originalAmount": 1640.73,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 1640.73,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 1,
+      "createdAt": "2026-11-19T03:57:42.330Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-O5KYYU",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03505x8DiuvZVb0kRyUQuj",
+      "originalAmount": 2812.72,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 2812.72,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 2,
+      "createdAt": "2026-11-19T04:12:02.177Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-FNGSAL",
+      "userId": null,
+      "offerId": "off_03506dqXHqROXgs3IeDhNg",
+      "origin": "BOG",
+      "destination": "FRA",
+      "grossAmount": 833,
+      "originalAmount": 833,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 833,
+      "netAfterRedemptionCop": 833,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 833,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T04:40:04.660Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-FT5VB5",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03506pfzYuXrkdT6XIiNbE",
+      "origin": "BOG",
+      "destination": "MAD",
+      "grossAmount": 619,
+      "originalAmount": 619,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 619,
+      "netAfterRedemptionCop": 619,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 619,
+      "currency": "EUR",
+      "paymentMethod": "SISTECREDITO",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T04:47:53.707Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-204T95",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_03506te2NyDdYw9PnMGvuD",
+      "origin": "BOG",
+      "destination": "SMR",
+      "grossAmount": 278,
+      "originalAmount": 278,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 278,
+      "netAfterRedemptionCop": 278,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 278,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-19T04:50:41.737Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-Q5HO6R",
+      "userId": null,
+      "offerId": "off_0350dJ0Ew1Kn1JT5k8jQdE",
+      "origin": "BOG",
+      "destination": "MDE",
+      "grossAmount": 46,
+      "originalAmount": 46,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 46,
+      "netAfterRedemptionCop": 46,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 46,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T02:51:29.642Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-5TGOCL",
+      "userId": "USR-CDD4E94A",
+      "offerId": "off_0350dNLIvDgQYoYJfFujIj",
+      "origin": "BOG",
+      "destination": "MAD",
+      "grossAmount": 1766,
+      "originalAmount": 1766,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 1766,
+      "netAfterRedemptionCop": 1766,
+      "pointsLiabilityCop": 10,
+      "netMarginBaseCop": 1756,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 1,
+      "createdAt": "2026-11-20T02:54:05.171Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-4N9VM5",
+      "userId": null,
+      "offerId": "off_0350gEsWDUEJPLCjvzNcHI",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "",
+      "departureTime": "",
+      "arrivalTime": "",
+      "airline": "",
+      "flightNumber": "",
+      "stops": "",
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "off_0350gEsWDUEJPLCjvzNcHI",
+        "airline": "",
+        "flightNumber": "",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "",
+        "departureTime": "",
+        "arrivalTime": "",
+        "stops": null,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 117,
+      "originalAmount": 117,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 117,
+      "netAfterRedemptionCop": 117,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 117,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T04:50:38.811Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-XJ8IYL",
+      "userId": null,
+      "offerId": "off_0350gRPpWeoLQm6VmIPZYW",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "2026-12-10",
+      "departureTime": "2026-12-10T14:00:00",
+      "arrivalTime": "2026-12-10T15:35:00",
+      "airline": "Avianca",
+      "flightNumber": "AV 8490",
+      "stops": 0,
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "off_0350gRPpWeoLQm6VmIPZYW",
+        "airline": "Avianca",
+        "flightNumber": "AV 8490",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "departureTime": "2026-12-10T14:00:00",
+        "arrivalTime": "2026-12-10T15:35:00",
+        "stops": 0,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 117,
+      "originalAmount": 117,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 117,
+      "netAfterRedemptionCop": 117,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 117,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T04:58:50.757Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-2UF0Z7",
+      "userId": null,
+      "offerId": "off_0350gXCPA7kZttXCqGzO2D",
+      "origin": "BOG",
+      "destination": "MDE",
+      "departureDate": "2026-12-26",
+      "departureTime": "2026-12-26T05:35:00",
+      "arrivalTime": "2026-12-26T06:35:00",
+      "airline": "Avianca",
+      "flightNumber": "AV 9252",
+      "stops": 1,
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "off_0350gXCPA7kZttXCqGzO2D",
+        "airline": "Avianca",
+        "flightNumber": "AV 9252",
+        "origin": "BOG",
+        "destination": "MDE",
+        "departureDate": "2026-12-26",
+        "departureTime": "2026-12-26T05:35:00",
+        "arrivalTime": "2026-12-26T06:35:00",
+        "stops": 1,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 552,
+      "originalAmount": 552,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 552,
+      "netAfterRedemptionCop": 552,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 552,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T05:02:43.042Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-ZZ4D76",
+      "userId": null,
+      "offerId": "off_0350gf56Ptu2GTQHhGmVo9",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "2026-12-10",
+      "departureTime": "2026-12-10T12:10:00",
+      "arrivalTime": "2026-12-10T13:45:00",
+      "airline": "Avianca",
+      "flightNumber": "AV 8558",
+      "stops": 0,
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "off_0350gf56Ptu2GTQHhGmVo9",
+        "airline": "Avianca",
+        "flightNumber": "AV 8558",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "departureTime": "2026-12-10T12:10:00",
+        "arrivalTime": "2026-12-10T13:45:00",
+        "stops": 0,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 117,
+      "originalAmount": 117,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 117,
+      "netAfterRedemptionCop": 117,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 117,
+      "currency": "EUR",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T05:07:49.466Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-08FVA8",
+      "userId": null,
+      "offerId": "off_0350griVteqON3i0H5HAwb",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "2026-12-10",
+      "departureTime": "2026-12-10T12:10:00",
+      "arrivalTime": "2026-12-10T13:45:00",
+      "airline": "Avianca",
+      "flightNumber": "AV 8558",
+      "stops": 0,
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "off_0350griVteqON3i0H5HAwb",
+        "airline": "Avianca",
+        "flightNumber": "AV 8558",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "departureTime": "2026-12-10T12:10:00",
+        "arrivalTime": "2026-12-10T13:45:00",
+        "stops": 0,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 117,
+      "originalAmount": 117,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 117,
+      "netAfterRedemptionCop": 117,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 117,
+      "currency": "EUR",
+      "paymentMethod": "CRYPTO",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T05:16:09.562Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-WL8J4X",
+      "userId": null,
+      "offerId": "gf_1795189761276_0",
+      "origin": "BOG",
+      "destination": "RCH",
+      "departureDate": "2026-12-02",
+      "departureTime": "2026-12-02T2026-12-02T09:10:00",
+      "arrivalTime": "2026-12-02T2026-12-02T14:20:00",
+      "airline": "Avianca",
+      "flightNumber": "AV 9332",
+      "stops": 1,
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "gf_1795189761276_0",
+        "airline": "Avianca",
+        "flightNumber": "AV 9332",
+        "origin": "BOG",
+        "destination": "RCH",
+        "departureDate": "2026-12-02",
+        "departureTime": "2026-12-02T2026-12-02T09:10:00",
+        "arrivalTime": "2026-12-02T2026-12-02T14:20:00",
+        "stops": 1,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 250700,
+      "originalAmount": 250700,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 250700,
+      "netAfterRedemptionCop": 250700,
+      "pointsLiabilityCop": 0,
+      "netMarginBaseCop": 250700,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 0,
+      "createdAt": "2026-11-20T15:49:57.161Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-ZW4IY0",
+      "userId": "USR-CDD4E94A",
+      "offerId": "gf_1795189850526_0",
+      "origin": "BOG",
+      "destination": "MAD",
+      "departureDate": "2026-12-28",
+      "departureTime": "2026-12-28T2026-12-28T21:50:00",
+      "arrivalTime": "2026-12-28T2026-12-29T13:25:00",
+      "airline": "Avianca",
+      "flightNumber": "AV 10",
+      "stops": 0,
+      "cabin": "Economy",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "gf_1795189850526_0",
+        "airline": "Avianca",
+        "flightNumber": "AV 10",
+        "origin": "BOG",
+        "destination": "MAD",
+        "departureDate": "2026-12-28",
+        "departureTime": "2026-12-28T2026-12-28T21:50:00",
+        "arrivalTime": "2026-12-28T2026-12-29T13:25:00",
+        "stops": 0,
+        "cabin": "Economy",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 5226060,
+      "originalAmount": 5226060,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 5226060,
+      "netAfterRedemptionCop": 5226060,
+      "pointsLiabilityCop": 52260,
+      "netMarginBaseCop": 5173800,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 5226,
+      "createdAt": "2026-11-20T15:50:57.441Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-WXWXEB",
+      "userId": "USR-CDD4E94A",
+      "offerId": "gf_1795189745314_1",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "2026-12-10",
+      "departureTime": "2026-12-10T2026-12-10T19:40:00",
+      "arrivalTime": "2026-12-10T2026-12-10T21:10:00",
+      "airline": "LATAM",
+      "flightNumber": "LA 4120",
+      "stops": 0,
+      "cabin": "Económica",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "gf_1795189745314_1",
+        "airline": "LATAM",
+        "flightNumber": "LA 4120",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "departureTime": "2026-12-10T2026-12-10T19:40:00",
+        "arrivalTime": "2026-12-10T2026-12-10T21:10:00",
+        "stops": 0,
+        "cabin": "Económica",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 216480,
+      "originalAmount": 216480,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 216480,
+      "netAfterRedemptionCop": 216480,
+      "pointsLiabilityCop": 2160,
+      "netMarginBaseCop": 214320,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 216,
+      "createdAt": "2026-11-20T17:12:48.579Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-GB5HVD",
+      "userId": "USR-CDD4E94A",
+      "offerId": "gf_1795189745314_3",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "2026-12-10",
+      "departureTime": "2026-12-10T2026-12-10T21:25:00",
+      "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+      "airline": "LATAM",
+      "flightNumber": "LA 4124",
+      "stops": 0,
+      "cabin": "Económica",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "gf_1795189745314_3",
+        "airline": "LATAM",
+        "flightNumber": "LA 4124",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "departureTime": "2026-12-10T2026-12-10T21:25:00",
+        "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+        "stops": 0,
+        "cabin": "Económica",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 216480,
+      "originalAmount": 216480,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 216480,
+      "netAfterRedemptionCop": 216480,
+      "pointsLiabilityCop": 2160,
+      "netMarginBaseCop": 214320,
+      "currency": "COP",
+      "paymentMethod": "SISTECREDITO",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 216,
+      "createdAt": "2026-11-20T17:20:42.485Z",
+      "status": "APPROVED",
+      "emailSent": false
+    },
+    {
+      "pnr": "TRX-XCNS1B",
+      "userId": "USR-CDD4E94A",
+      "offerId": "gf_1795189745314_3",
+      "origin": "BOG",
+      "destination": "CTG",
+      "departureDate": "2026-12-10",
+      "departureTime": "2026-12-10T2026-12-10T21:25:00",
+      "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+      "airline": "LATAM",
+      "flightNumber": "LA 4124",
+      "stops": 0,
+      "cabin": "Económica",
+      "baggage": "Según tarifa seleccionada",
+      "flightDetails": {
+        "id": "gf_1795189745314_3",
+        "airline": "LATAM",
+        "flightNumber": "LA 4124",
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "departureTime": "2026-12-10T2026-12-10T21:25:00",
+        "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+        "stops": 0,
+        "cabin": "Económica",
+        "baggage": "Según tarifa seleccionada"
+      },
+      "grossAmount": 216480,
+      "originalAmount": 216480,
+      "discountAmount": 0,
+      "pointsRedeemed": 0,
+      "amount": 216480,
+      "netAfterRedemptionCop": 216480,
+      "pointsLiabilityCop": 2160,
+      "netMarginBaseCop": 214320,
+      "currency": "COP",
+      "paymentMethod": "ADDI",
+      "passengerName": "Camilo Serna",
+      "email": "ops.trayectia@gmail.com",
+      "pointsEarned": 216,
+      "createdAt": "2026-11-20T17:24:21.167Z",
+      "status": "APPROVED",
+      "emailSent": false
+    }
+  ],
+  "users": [
+    {
+      "id": "USR-CDD4E94A",
+      "name": "Camilo Serna",
+      "email": "andrescamilo.serna.m@gmail.com",
+      "passwordHash": "a680a23d6a92d19d4e206e6dee18f7ec:111eea73c0ecb75deac00ee1619120b54750723f3dca125178104ae5f25b7402acd914ce379a78d33df901deec4b7190d65b7d3fc03dcd015831dbe46a0708d6",
+      "pointsBalance": 29206,
+      "pointsHistory": [
+        {
+          "id": "PTS-99C889",
+          "type": "EARN",
+          "points": 216,
+          "pnr": "TRX-XCNS1B",
+          "description": "Compra reserva TRX-XCNS1B (ADDI)",
+          "createdAt": "2026-11-20T17:24:21.167Z"
+        },
+        {
+          "id": "PTS-AF195C",
+          "type": "EARN",
+          "points": 216,
+          "pnr": "TRX-GB5HVD",
+          "description": "Compra reserva TRX-GB5HVD (SISTECREDITO)",
+          "createdAt": "2026-11-20T17:20:42.485Z"
+        },
+        {
+          "id": "PTS-E49BFB",
+          "type": "EARN",
+          "points": 216,
+          "pnr": "TRX-WXWXEB",
+          "description": "Compra reserva TRX-WXWXEB (ADDI)",
+          "createdAt": "2026-11-20T17:12:48.579Z"
+        },
+        {
+          "id": "PTS-2BFBA4",
+          "type": "EARN",
+          "points": 5226,
+          "pnr": "TRX-ZW4IY0",
+          "description": "Compra reserva TRX-ZW4IY0 (ADDI)",
+          "createdAt": "2026-11-20T15:50:57.441Z"
+        },
+        {
+          "id": "PTS-FF6E08",
+          "type": "EARN",
+          "points": 1,
+          "pnr": "TRX-5TGOCL",
+          "description": "Compra reserva TRX-5TGOCL (ADDI)",
+          "createdAt": "2026-11-20T02:54:05.171Z"
+        },
+        {
+          "id": "pts-earn-1795061522177",
+          "type": "EARN",
+          "points": 2,
+          "pnr": "TRX-O5KYYU",
+          "description": "Compra reserva TRX-O5KYYU (ADDI)",
+          "createdAt": "2026-11-19T04:12:02.178Z"
+        },
+        {
+          "id": "pts-earn-1795060662330",
+          "type": "EARN",
+          "points": 1,
+          "pnr": "TRX-03KLY8",
+          "description": "Compra reserva TRX-03KLY8 (ADDI)",
+          "createdAt": "2026-11-19T03:57:42.330Z"
+        },
+        {
+          "id": "PTS-DE9228",
+          "pnr": "TRX-3DKIZZ",
+          "points": 2,
+          "type": "EARN",
+          "description": "Reserva TRX-3DKIZZ (ADDI)",
+          "createdAt": "2026-11-19T03:48:32.805Z"
+        },
+        {
+          "pnr": "TRX-TP7JUU",
+          "points": 230,
+          "description": "Acumulación por orden TRX-TP7JUU (BOG → CTG)",
+          "createdAt": "2026-11-20T18:38:08.654Z"
+        },
+        {
+          "pnr": "TRX-EVY8DQ",
+          "points": 256,
+          "description": "Acumulación por orden TRX-EVY8DQ (BOG → CTG)",
+          "createdAt": "2026-11-20T18:50:06.684Z"
+        },
+        {
+          "pnr": "TRX-XYTS4P",
+          "points": -3955,
+          "description": "Redención en orden TRX-XYTS4P (-$39,550 COP · BOG → CTG)",
+          "createdAt": "2026-11-20T18:51:07.814Z"
+        },
+        {
+          "pnr": "TRX-XYTS4P",
+          "points": 224,
+          "description": "Acumulación por orden TRX-XYTS4P (BOG → CTG)",
+          "createdAt": "2026-11-20T18:51:07.814Z"
+        },
+        {
+          "pnr": "TRX-3B338Y",
+          "points": -2635,
+          "description": "Redención en orden TRX-3B338Y (-$26,350 COP · BOG → CTG)",
+          "createdAt": "2026-11-20T19:02:22.645Z"
+        },
+        {
+          "pnr": "TRX-3B338Y",
+          "points": 190,
+          "description": "Acumulación por orden TRX-3B338Y (BOG → CTG)",
+          "createdAt": "2026-11-20T19:02:22.645Z"
+        },
+        {
+          "pnr": "TRX-GGGAES",
+          "points": 1036,
+          "description": "Acumulación por orden TRX-GGGAES (BOG → CTG)",
+          "createdAt": "2026-11-20T19:04:51.671Z"
+        },
+        {
+          "pnr": "TRX-RFKLYD",
+          "points": -1226,
+          "description": "Redención en orden TRX-RFKLYD (-$12,260 COP · BOG → CTG)",
+          "createdAt": "2026-11-20T19:05:13.724Z"
+        },
+        {
+          "pnr": "TRX-RFKLYD",
+          "points": 217,
+          "description": "Acumulación por orden TRX-RFKLYD (BOG → CTG)",
+          "createdAt": "2026-11-20T19:05:13.724Z"
+        },
+        {
+          "pnr": "TRX-P2CX9D",
+          "points": 5647,
+          "description": "Acumulación por orden TRX-P2CX9D (BOG → EZE)",
+          "createdAt": "2026-11-20T19:35:51.306Z"
+        },
+        {
+          "pnr": "TRX-EHLV7H",
+          "points": 5796,
+          "description": "Acumulación por orden TRX-EHLV7H (BOG → EZE)",
+          "createdAt": "2026-11-20T19:36:11.176Z"
+        },
+        {
+          "pnr": "TRX-QBKAHS",
+          "points": 2971,
+          "description": "Acumulación por orden TRX-QBKAHS (BOG → CUN)",
+          "createdAt": "2026-11-20T19:37:50.308Z"
+        },
+        {
+          "pnr": "TRX-Z58QW6",
+          "points": 3015,
+          "description": "Acumulación por orden TRX-Z58QW6 (BOG → CUN)",
+          "createdAt": "2026-11-20T19:40:15.995Z"
+        },
+        {
+          "pnr": "TRX-T2Z23L",
+          "points": 538,
+          "description": "Acumulación por orden TRX-T2Z23L (BOG → SMR)",
+          "createdAt": "2026-11-20T19:44:04.897Z"
+        },
+        {
+          "pnr": "TRX-34QEBL",
+          "points": 5226,
+          "description": "Acumulación por orden TRX-34QEBL (BOG → MAD)",
+          "createdAt": "2026-11-20T19:48:59.726Z"
+        },
+        {
+          "pnr": "TRX-TZEHDZ",
+          "points": 5796,
+          "description": "Acumulación por orden TRX-TZEHDZ (BOG → EZE)",
+          "createdAt": "2026-11-20T19:51:26.593Z"
+        }
+      ],
+      "tokens": [
+        "92e0c7468a5ab026269b9001a8458822e7c95f1db4dec202",
+        "7a080097c8c5b993568edd7726bbe3afa0e2c5069cba0f4b",
+        "2e8d9dae1c71cb3288703e8fd0a780fbcb0ffc0fa768dea6",
+        "faac5be6e8b0ee271b9a08b363a51574b0bef6486ddc878f",
+        "2a3c67f8-87e1-4c79-b135-a848b7aeda0c",
+        "fe9e72ed-f77f-446b-9ceb-04336707bc76",
+        "e9642f65-3cc8-4e05-920d-01c788f1a106",
+        "b6440dfb-505e-4c7b-bd95-871f7b1b204a",
+        "96a2f91b-cd7d-47fe-b595-6d063b2bc9ab",
+        "daa6fe3a-fdb6-403f-bee7-23f28da21fea",
+        "814ac084bdc0c93efbb4ca6ff0a6deb1399ad2099e4606c0586dc5e3ff0de3e9"
+      ],
+      "createdAt": "2026-11-19T00:09:32.753Z",
+      "points": 29206
+    },
+    {
+      "id": "USR-D8E3E8F8",
+      "name": "Camilo Serna",
+      "email": "andrescamilo.serna.ma@gmail.com",
+      "passwordHash": "b318778911f1bccbdf71bc37f2fa5ed3:ac7f9fd1b6f9c0749b5bcc0ad86a7cfb724a6ff8d8642439f07356e28ef7b0744d4e9a074108f7a14c9f54e44787751665bbb896ed55411c6ea6008a14e58ddf",
+      "pointsBalance": 0,
+      "pointsHistory": [],
+      "tokens": [
+        "b652d3c5e1df1b211048b62742b225d0d73cb540aefbfeb6"
+      ],
+      "createdAt": "2026-11-19T00:22:34.301Z"
+    }
+  ],
+  "orders": [
+    {
+      "orderCode": "TRX-AV9JD9",
+      "paymentReference": "PAY-TRX-AV9JD9",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": null
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {},
+      "createdAt": "2026-11-20T17:36:54.203Z"
+    },
+    {
+      "orderCode": "TRX-E7XM94",
+      "paymentReference": "PAY-TRX-E7XM94",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196210570_1",
+          "airline": "LATAM",
+          "flightNumber": "LA 4120",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T19:40:00",
+          "arrivalTime": "2026-12-10T2026-12-10T21:10:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:36:54.208Z"
+    },
+    {
+      "orderCode": "TRX-JQ2RSS",
+      "paymentReference": "PAY-TRX-JQ2RSS",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "RCH",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": null
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {},
+      "createdAt": "2026-11-20T17:40:56.581Z"
+    },
+    {
+      "orderCode": "TRX-RWZJ5G",
+      "paymentReference": "PAY-TRX-RWZJ5G",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "RCH",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196440928_3",
+          "airline": "Avianca",
+          "flightNumber": "AV 8590",
+          "origin": "BOG",
+          "destination": "RCH",
+          "departureTime": "2026-12-10T2026-12-10T11:55:00",
+          "arrivalTime": "2026-12-10T2026-12-10T13:30:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 391700,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:40:56.588Z"
+    },
+    {
+      "orderCode": "TRX-H7UJS2",
+      "paymentReference": "PAY-TRX-H7UJS2",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": null
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {},
+      "createdAt": "2026-11-20T17:42:49.044Z"
+    },
+    {
+      "orderCode": "TRX-YQ2DEZ",
+      "paymentReference": "PAY-TRX-YQ2DEZ",
+      "paymentMethod": "SISTECREDITO",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:42:49.049Z"
+    },
+    {
+      "orderCode": "TRX-Z34XBS",
+      "paymentReference": "PAY-TRX-Z34XBS",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:42:58.981Z"
+    },
+    {
+      "orderCode": "TRX-MESJ9N",
+      "paymentReference": "PAY-TRX-MESJ9N",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": null
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {},
+      "createdAt": "2026-11-20T17:47:50.438Z"
+    },
+    {
+      "orderCode": "TRX-HA99G6",
+      "paymentReference": "PAY-TRX-HA99G6",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:47:50.444Z"
+    },
+    {
+      "orderCode": "TRX-4597JA",
+      "paymentReference": "PAY-TRX-4597JA",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:53:10.863Z"
+    },
+    {
+      "orderCode": "TRX-CTNZR9",
+      "paymentReference": "PAY-TRX-CTNZR9",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:53:10.871Z"
+    },
+    {
+      "orderCode": "TRX-M8HKWE",
+      "paymentReference": "PAY-TRX-M8HKWE",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_1",
+          "airline": "LATAM",
+          "flightNumber": "LA 4120",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T19:40:00",
+          "arrivalTime": "2026-12-10T2026-12-10T21:10:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:55:08.229Z"
+    },
+    {
+      "orderCode": "TRX-2ZQSKZ",
+      "paymentReference": "PAY-TRX-2ZQSKZ",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_1",
+          "airline": "LATAM",
+          "flightNumber": "LA 4120",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T19:40:00",
+          "arrivalTime": "2026-12-10T2026-12-10T21:10:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:55:08.236Z"
+    },
+    {
+      "orderCode": "TRX-ECB8MK",
+      "paymentReference": "PAY-TRX-ECB8MK",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:58:56.148Z"
+    },
+    {
+      "orderCode": "TRX-2DH3HF",
+      "paymentReference": "PAY-TRX-2DH3HF",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T17:58:56.154Z"
+    },
+    {
+      "orderCode": "TRX-XDJNMT",
+      "paymentReference": "PAY-TRX-XDJNMT",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "RCH",
+        "departureDate": "2026-12-02",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795197717916_0",
+          "airline": "LATAM",
+          "flightNumber": "LA 4280",
+          "origin": "BOG",
+          "destination": "RCH",
+          "departureTime": "2026-12-02T2026-12-02T10:10:00",
+          "arrivalTime": "2026-12-02T2026-12-02T11:50:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 278600,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:04:50.268Z"
+    },
+    {
+      "orderCode": "TRX-57FN49",
+      "paymentReference": "PAY-TRX-57FN49",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "RCH",
+        "departureDate": "2026-12-02",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795197717916_0",
+          "airline": "LATAM",
+          "flightNumber": "LA 4280",
+          "origin": "BOG",
+          "destination": "RCH",
+          "departureTime": "2026-12-02T2026-12-02T10:10:00",
+          "arrivalTime": "2026-12-02T2026-12-02T11:50:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 278600,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:04:50.275Z"
+    },
+    {
+      "orderCode": "TRX-KUUZM9",
+      "paymentReference": "PAY-TRX-KUUZM9",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:16:12.160Z"
+    },
+    {
+      "orderCode": "TRX-6WS49Q",
+      "paymentReference": "PAY-TRX-6WS49Q",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_2",
+          "airline": "Wingo",
+          "flightNumber": "P5 7234",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T17:55:00",
+          "arrivalTime": "2026-12-10T2026-12-10T19:27:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 230128,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:18:40.781Z"
+    },
+    {
+      "orderCode": "TRX-UHXZKU",
+      "paymentReference": "PAY-TRX-UHXZKU",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_4",
+          "airline": "LATAM",
+          "flightNumber": "LA 4128",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T15:05:00",
+          "arrivalTime": "2026-12-10T2026-12-10T16:35:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 256580,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:22:15.797Z"
+    },
+    {
+      "orderCode": "TRX-BR493W",
+      "paymentReference": "PAY-TRX-BR493W",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "RCH",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196440928_4",
+          "airline": "Avianca",
+          "flightNumber": "AV 8528",
+          "origin": "BOG",
+          "destination": "RCH",
+          "departureTime": "2026-12-10T2026-12-10T14:10:00",
+          "arrivalTime": "2026-12-10T2026-12-10T15:50:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 391700,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:22:47.434Z"
+    },
+    {
+      "orderCode": "TRX-F6FDC2",
+      "paymentReference": "PAY-TRX-F6FDC2",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_2",
+          "airline": "Wingo",
+          "flightNumber": "P5 7234",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T17:55:00",
+          "arrivalTime": "2026-12-10T2026-12-10T19:27:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 230128,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:27:19.132Z"
+    },
+    {
+      "orderCode": "TRX-8DS922",
+      "paymentReference": "PAY-TRX-8DS922",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 216480,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        }
+      },
+      "createdAt": "2026-11-20T18:28:28.520Z"
+    },
+    {
+      "orderCode": "TRX-TP7JUU",
+      "paymentReference": "PAY-TRX-TP7JUU",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 230,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_2",
+          "airline": "Wingo",
+          "flightNumber": "P5 7234",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T17:55:00",
+          "arrivalTime": "2026-12-10T2026-12-10T19:27:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 230128,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 230128,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 230128
+      },
+      "createdAt": "2026-11-20T18:38:08.654Z"
+    },
+    {
+      "orderCode": "TRX-EVY8DQ",
+      "paymentReference": "PAY-TRX-EVY8DQ",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 256,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_4",
+          "airline": "LATAM",
+          "flightNumber": "LA 4128",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T15:05:00",
+          "arrivalTime": "2026-12-10T2026-12-10T16:35:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 256580,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 256580,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 256580
+      },
+      "createdAt": "2026-11-20T18:50:06.684Z"
+    },
+    {
+      "orderCode": "TRX-XYTS4P",
+      "paymentReference": "PAY-TRX-XYTS4P",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 3955,
+      "discountAmount": 39550,
+      "pointsEarned": 224,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_5",
+          "airline": "JetSMART",
+          "flightNumber": "JA 5166",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T18:20:00",
+          "arrivalTime": "2026-12-10T2026-12-10T19:57:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 224170,
+        "currency": "COP",
+        "pointsToRedeem": 6366,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 263720,
+        "discountAmount": 39550,
+        "pointsRedeemed": 3955,
+        "finalAmount": 224170
+      },
+      "createdAt": "2026-11-20T18:51:07.806Z"
+    },
+    {
+      "orderCode": "TRX-3B338Y",
+      "paymentReference": "PAY-TRX-3B338Y",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 2635,
+      "discountAmount": 26350,
+      "pointsEarned": 190,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_3",
+          "airline": "LATAM",
+          "flightNumber": "LA 4124",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T21:25:00",
+          "arrivalTime": "2026-12-10T2026-12-10T22:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 190130,
+        "currency": "COP",
+        "pointsToRedeem": 2635,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 216480,
+        "discountAmount": 26350,
+        "pointsRedeemed": 2635,
+        "finalAmount": 190130
+      },
+      "createdAt": "2026-11-20T19:02:22.645Z"
+    },
+    {
+      "orderCode": "TRX-GGGAES",
+      "paymentReference": "PAY-TRX-GGGAES",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 1036,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_32",
+          "airline": "Avianca",
+          "flightNumber": "AV 9542",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T15:50:00",
+          "arrivalTime": "2026-12-10T2026-12-10T17:20:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 1036390,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 1036390,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 1036390
+      },
+      "createdAt": "2026-11-20T19:04:51.671Z"
+    },
+    {
+      "orderCode": "TRX-RFKLYD",
+      "paymentReference": "PAY-TRX-RFKLYD",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 1226,
+      "discountAmount": 12260,
+      "pointsEarned": 217,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CTG",
+        "departureDate": "2026-12-10",
+        "returnDate": "",
+        "details": {
+          "id": "gf_1795196557707_2",
+          "airline": "Wingo",
+          "flightNumber": "P5 7234",
+          "origin": "BOG",
+          "destination": "CTG",
+          "departureTime": "2026-12-10T2026-12-10T17:55:00",
+          "arrivalTime": "2026-12-10T2026-12-10T19:27:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 217868,
+        "currency": "COP",
+        "pointsToRedeem": 1226,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 230128,
+        "discountAmount": 12260,
+        "pointsRedeemed": 1226,
+        "finalAmount": 217868
+      },
+      "createdAt": "2026-11-20T19:05:13.718Z"
+    },
+    {
+      "orderCode": "TRX-P2CX9D",
+      "paymentReference": "PAY-TRX-P2CX9D",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 5647,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "EZE",
+        "departureDate": "2027-01-05",
+        "returnDate": "2027-01-12",
+        "details": {
+          "id": "gf_1795203340744_8",
+          "airline": "Arajet",
+          "flightNumber": "DM 1501",
+          "origin": "BOG",
+          "destination": "EZE",
+          "departureTime": "2027-01-05T2027-01-05T14:06:00",
+          "arrivalTime": "2027-01-05T2027-01-06T04:20:00",
+          "stops": 1,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 5647041,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 5647041,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 5647041
+      },
+      "createdAt": "2026-11-20T19:35:51.306Z"
+    },
+    {
+      "orderCode": "TRX-EHLV7H",
+      "paymentReference": "PAY-TRX-EHLV7H",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 5796,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "EZE",
+        "departureDate": "2027-01-05",
+        "returnDate": "2027-01-12",
+        "details": {
+          "id": "gf_1795203340744_9",
+          "airline": "COPA",
+          "flightNumber": "CM 416",
+          "origin": "BOG",
+          "destination": "EZE",
+          "departureTime": "2027-01-05T2027-01-05T10:40:00",
+          "arrivalTime": "2027-01-05T2027-01-05T22:20:00",
+          "stops": 1,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 5796360,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 5796360,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 5796360
+      },
+      "createdAt": "2026-11-20T19:36:11.176Z"
+    },
+    {
+      "orderCode": "TRX-QBKAHS",
+      "paymentReference": "PAY-TRX-QBKAHS",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 2971,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CUN",
+        "departureDate": "2026-12-26",
+        "returnDate": "2027-01-02",
+        "details": {
+          "id": "gf_1795203344333_2",
+          "airline": "Avianca",
+          "flightNumber": "AV 68",
+          "origin": "BOG",
+          "destination": "CUN",
+          "departureTime": "2026-12-26T2026-12-26T12:00:00",
+          "arrivalTime": "2026-12-26T2026-12-26T15:55:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 2971360,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 2971360,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 2971360
+      },
+      "createdAt": "2026-11-20T19:37:50.308Z"
+    },
+    {
+      "orderCode": "TRX-Z58QW6",
+      "paymentReference": "PAY-TRX-Z58QW6",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 3015,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "CUN",
+        "departureDate": "2026-12-26",
+        "returnDate": "2027-01-02",
+        "details": {
+          "id": "gf_1795203344333_4",
+          "airline": "Avianca",
+          "flightNumber": "AV 264",
+          "origin": "BOG",
+          "destination": "CUN",
+          "departureTime": "2026-12-26T2026-12-26T13:10:00",
+          "arrivalTime": "2026-12-26T2026-12-26T17:00:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 3015050,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 3015050,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 3015050
+      },
+      "createdAt": "2026-11-20T19:40:15.995Z"
+    },
+    {
+      "orderCode": "TRX-T2Z23L",
+      "paymentReference": "PAY-TRX-T2Z23L",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 538,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "SMR",
+        "departureDate": "2026-12-18",
+        "returnDate": "2026-12-25",
+        "details": {
+          "id": "gf_1795203340434_4",
+          "airline": "Avianca",
+          "flightNumber": "AV 8484",
+          "origin": "BOG",
+          "destination": "SMR",
+          "departureTime": "2026-12-18T2026-12-18T07:05:00",
+          "arrivalTime": "2026-12-18T2026-12-18T08:45:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 538680,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 538680,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 538680
+      },
+      "createdAt": "2026-11-20T19:44:04.897Z"
+    },
+    {
+      "orderCode": "TRX-34QEBL",
+      "paymentReference": "PAY-TRX-34QEBL",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 5226,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "MAD",
+        "departureDate": "2026-12-28",
+        "returnDate": "2027-01-08",
+        "details": {
+          "id": "gf_1795203347716_5",
+          "airline": "Avianca",
+          "flightNumber": "AV 182",
+          "origin": "BOG",
+          "destination": "MAD",
+          "departureTime": "2026-12-28T2026-12-28T16:35:00",
+          "arrivalTime": "2026-12-28T2026-12-29T08:10:00",
+          "stops": 0,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 5226060,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 5226060,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 5226060
+      },
+      "createdAt": "2026-11-20T19:48:59.726Z"
+    },
+    {
+      "orderCode": "TRX-TZEHDZ",
+      "paymentReference": "PAY-TRX-TZEHDZ",
+      "paymentMethod": "ADDI",
+      "status": "pending_payment",
+      "userId": "USR-CDD4E94A",
+      "pointsRedeemed": 0,
+      "discountAmount": 0,
+      "pointsEarned": 5796,
+      "operatingSchedule": {
+        "isOpen": true,
+        "window": "Lun-Sáb 08:00 - 20:00 (hora Colombia)"
+      },
+      "operatingMessage": "Dentro del horario operativo de Trayectia: una vez confirmado el pago, la orden pasa a paid_pending_issue para emisión.",
+      "flight": {
+        "origin": "BOG",
+        "destination": "EZE",
+        "departureDate": "2027-01-05",
+        "returnDate": "2027-01-12",
+        "details": {
+          "id": "gf_1795203347792_9",
+          "airline": "COPA",
+          "flightNumber": "CM 416",
+          "origin": "BOG",
+          "destination": "EZE",
+          "departureTime": "2027-01-05T2027-01-05T10:40:00",
+          "arrivalTime": "2027-01-05T2027-01-05T22:20:00",
+          "stops": 1,
+          "cabin": "Economy",
+          "baggage": "Según tarifa seleccionada"
+        }
+      },
+      "contact": {
+        "email": "ops.trayectia@gmail.com",
+        "phone": "+573001234567"
+      },
+      "passengers": [
+        {
+          "passengerNumber": 1,
+          "type": "adult",
+          "firstName": "Camilo",
+          "lastName": "Serna",
+          "birthDate": "1995-01-01"
+        }
+      ],
+      "pricing": {
+        "totalAmount": 5796360,
+        "currency": "COP",
+        "pointsToRedeem": 0,
+        "passengersBreakdown": {
+          "adults": 1,
+          "children": 0,
+          "infants_in_seat": 0,
+          "infants_on_lap": 0
+        },
+        "grossAmount": 5796360,
+        "discountAmount": 0,
+        "pointsRedeemed": 0,
+        "finalAmount": 5796360
+      },
+      "createdAt": "2026-11-20T19:51:26.593Z"
+    }
+  ]
 }
