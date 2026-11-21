@@ -1,13 +1,16 @@
 {
   "name": "trayectia-core",
   "version": "1.0.0",
-  "description": "Plataforma de reservas, financiación con Addi y control de emisión para Trayectia",
   "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js"
-  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.0"
+    "@duffel/api": "^2.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.22.3",
+    "express-rate-limit": "^8.7.5",
+    "helmet": "^8.3.0",
+    "node-fetch": "^2.7.0",
+    "nodemailer": "^10.6.0"
   }
 }
