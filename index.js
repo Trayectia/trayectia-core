@@ -26,7 +26,7 @@ if (!SERPAPI_KEY) {
   console.warn("⚠️ AVISO: Falta SERPAPI_KEY en .env. Se usarán vuelos de respaldo si no hay clave.");
 }
 
-// Configura cabeceras de seguridad permitiendo scripts inline necesarios en la app
+// Configura cabeceras de seguridad permitiendo scripts inline y recursos necesarios en la app
 app.use(
   helmet({
     contentSecurityPolicy: {
@@ -34,15 +34,17 @@ app.use(
         ...helmet.contentSecurityPolicy.getDefaultDirectives(),
         "script-src": ["'self'", "'unsafe-inline'"],
         "script-src-attr": ["'unsafe-inline'"],
+        "img-src": ["'self'", "data:", "https:"],
+        "connect-src": ["'self'", "https:"]
       },
     },
   })
 );
 
-// Habilita CORS, parseo de JSON y sirve los archivos estáticos de /public
+// Habilita CORS, parseo de JSON y sirve los archivos estáticos desde la raíz del proyecto
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(__dirname));
 
 // Limita la cantidad de peticiones a /api por IP en una ventana de 15 minutos
 const limiter = rateLimit({
@@ -52,9 +54,9 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
-// Rutas de persistencia local en disco (base de datos JSON y reporte Excel)
-const DB_FILE = path.join(__dirname, '../trayectia_db.json');
-const REPORT_FILE = path.join(__dirname, '../trayectia_reporte.xlsx');
+// Rutas de persistencia en el directorio del proyecto
+const DB_FILE = path.join(__dirname, 'trayectia_db.json');
+const REPORT_FILE = path.join(__dirname, 'trayectia_reporte.xlsx');
 
 // Lee trayectia_db.json asegurando que bookings, users y orders existan como arreglos
 function loadDB() {
@@ -299,7 +301,7 @@ app.get('/api/places/suggest', (req, res) => {
 });
 
 // Configuración de caché en disco para búsquedas de vuelos (TTL de 2 horas)
-const FLIGHT_CACHE_FILE = path.join(__dirname, '../flights_cache.json');
+const FLIGHT_CACHE_FILE = path.join(__dirname, 'flights_cache.json');
 const CACHE_TTL_MS = 2 * 60 * 60 * 1000;
 
 function loadFlightCache() {
@@ -1123,6 +1125,11 @@ app.get('/api/destinos-ofertas', (req, res) => {
     roundTrip,
     destinations: offers
   });
+});
+
+// Sirve la página principal index.html en la ruta raíz
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Arranca el servidor Express en el puerto configurado
