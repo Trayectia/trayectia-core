@@ -1493,7 +1493,7 @@
   <!-- ========================================== -->
   <!-- SECCIÓN 3: LÓGICA DE APLICACIÓN (SCRIPTS)  -->
   <!-- ========================================== -->
-  <script>
+<script>
     let allOffers = [];
     let selectedOffer = null;
     let selectedDuffelOfferId = null;
@@ -1637,241 +1637,241 @@
       `;
     }
 
-   async function lookupBooking(rawCodeInput = '') {
-  const codeInputEl =
-    document.getElementById('lookupCode') ||
-    document.getElementById('pnrInput') ||
-    document.getElementById('bookingCodeInput') ||
-    document.getElementById('lookupPnr') ||
-    document.getElementById('bookingPnr') ||
-    document.querySelector('input[id*="pnr" i], input[id*="lookup" i], input[id*="booking" i], input[id*="order" i]');
+    async function lookupBooking(rawCodeInput = '') {
+      const codeInputEl =
+        document.getElementById('lookupCode') ||
+        document.getElementById('pnrInput') ||
+        document.getElementById('bookingCodeInput') ||
+        document.getElementById('lookupPnr') ||
+        document.getElementById('bookingPnr') ||
+        document.querySelector('input[id*="pnr" i], input[id*="lookup" i], input[id*="booking" i], input[id*="order" i]');
 
-  const resultEl =
-    document.getElementById('lookupResult') ||
-    document.getElementById('bookingLookupResult') ||
-    document.getElementById('lookupStatus') ||
-    document.querySelector('[id*="lookupResult" i], [id*="bookingResult" i], [id*="lookup" i]:not(input):not(button)');
+      const resultEl =
+        document.getElementById('lookupResult') ||
+        document.getElementById('bookingLookupResult') ||
+        document.getElementById('lookupStatus') ||
+        document.querySelector('[id*="lookupResult" i], [id*="bookingResult" i], [id*="lookup" i]:not(input):not(button)');
 
-  const directValue =
-    rawCodeInput && typeof rawCodeInput === 'object'
-      ? (rawCodeInput.target?.value || '')
-      : String(rawCodeInput || '');
+      const directValue =
+        rawCodeInput && typeof rawCodeInput === 'object'
+          ? (rawCodeInput.target?.value || '')
+          : String(rawCodeInput || '');
 
-  const code = String(directValue || codeInputEl?.value || '')
-    .trim()
-    .toUpperCase();
+      const code = String(directValue || codeInputEl?.value || '')
+        .trim()
+        .toUpperCase();
 
-  if (!code) {
-    if (resultEl) {
-      resultEl.innerHTML = `<p style="color: var(--text-light, #6b7280);">Ingresa un código PNR o de orden (ej. TRX-...).</p>`;
-    }
-    return;
-  }
-
-  if (resultEl) {
-    resultEl.innerHTML = `<p style="color: var(--text-light, #6b7280);">Consultando código <strong>${code}</strong>...</p>`;
-  }
-
-  try {
-    const res = await fetch(`/api/bookings/lookup?pnr=${encodeURIComponent(code)}`);
-    const data = await res.json();
-    const booking = data?.booking || data?.data || null;
-
-    if (!res.ok || !data?.ok || !booking) {
-      const errMsg = data?.message || `No se encontró ninguna reserva u orden con el código ${code}.`;
-      if (resultEl) {
-        resultEl.innerHTML = `<p style="color: #dc2626;">${errMsg}</p>`;
+      if (!code) {
+        if (resultEl) {
+          resultEl.innerHTML = `<p style="color: var(--text-light, #6b7280);">Ingresa un código PNR o de orden (ej. TRX-...).</p>`;
+        }
+        return;
       }
-      return;
-    }
 
-    const cleanDateTime = (raw) => {
-      const str = String(raw || '').trim();
-      if (!str) return '';
-      const fixed = str.replace(/^(\d{4}-\d{2}-\d{2}T)\1/, '$1');
-      const d = new Date(fixed);
-      return Number.isNaN(d.getTime())
-        ? fixed
-        : d.toLocaleString('es-CO', { dateStyle: 'medium', timeStyle: 'short' });
-    };
+      if (resultEl) {
+        resultEl.innerHTML = `<p style="color: var(--text-light, #6b7280);">Consultando código <strong>${code}</strong>...</p>`;
+      }
 
-    const departureFormatted = cleanDateTime(booking.departureTime);
-    const arrivalFormatted = cleanDateTime(booking.arrivalTime);
-    const createdFormatted = cleanDateTime(booking.createdAt);
+      try {
+        const res = await fetch(`/api/bookings/lookup?pnr=${encodeURIComponent(code)}`);
+        const data = await res.json();
+        const booking = data?.booking || data?.data || null;
 
-    const currency = booking.currency || 'COP';
-    const formatMoney = (val) => `${Number(val || 0).toLocaleString('es-CO')} ${currency}`;
-    const origin = booking.origin || booking.flight?.origin || booking.segments?.[0]?.origin || '';
-    const destination = booking.destination || booking.flight?.destination || booking.segments?.[0]?.destination || '';
-    const route = [origin, destination].filter(Boolean).join(' ➔ ') || 'Por confirmar';
+        if (!res.ok || !data?.ok || !booking) {
+          const errMsg = data?.message || `No se encontró ninguna reserva u orden con el código ${code}.`;
+          if (resultEl) {
+            resultEl.innerHTML = `<p style="color: #dc2626;">${errMsg}</p>`;
+          }
+          return;
+        }
 
-    const extraRows = [
-      booking.airline || booking.flightNumber
-        ? `<p><strong>Aerolínea / Vuelo:</strong> ${[booking.airline, booking.flightNumber].filter(Boolean).join(' ')}</p>`
-        : '',
-      departureFormatted
-        ? `<p><strong>Salida:</strong> ${departureFormatted}</p>`
-        : '',
-      arrivalFormatted
-        ? `<p><strong>Llegada:</strong> ${arrivalFormatted}</p>`
-        : '',
-      booking.contactEmail
-        ? `<p><strong>Correo:</strong> ${booking.contactEmail}</p>`
-        : '',
-      createdFormatted
-        ? `<p><strong>Fecha de orden:</strong> ${createdFormatted}</p>`
-        : ''
-    ].filter(Boolean).join('');
+        const cleanDateTime = (raw) => {
+          const str = String(raw || '').trim();
+          if (!str) return '';
+          const fixed = str.replace(/^(\d{4}-\d{2}-\d{2}T)\1/, '$1');
+          const d = new Date(fixed);
+          return Number.isNaN(d.getTime())
+            ? fixed
+            : d.toLocaleString('es-CO', { dateStyle: 'medium', timeStyle: 'short' });
+        };
 
-    if (resultEl) {
-      resultEl.innerHTML = `
-        <div class="booking-lookup-card">
-          <p><strong>Código:</strong> ${booking.orderCode || booking.pnr}</p>
-          <p><strong>Pasajero:</strong> ${booking.passengerName || 'Viajero'}</p>
-          <p><strong>Ruta:</strong> ${route}</p>
-          <p><strong>Estado:</strong> ${booking.status || 'pending_payment'}</p>
-          <p><strong>Método de pago:</strong> ${booking.paymentMethod || 'ADDI'}</p>
-          <p><strong>Valor bruto:</strong> ${formatMoney(booking.grossAmount ?? booking.finalAmount)}</p>
-          <p><strong>Descuento por puntos:</strong> -${formatMoney(booking.discountAmount || 0)} (${Number(booking.pointsRedeemed || 0)} pts)</p>
-          <p><strong>Total a pagar:</strong> ${formatMoney(booking.finalAmount ?? booking.amount)}</p>
-          <p><strong>Puntos ganados:</strong> +${Number(booking.pointsEarned || 0)} pts</p>
-          ${extraRows}
-          ${booking.operatingMessage ? `<p><small>${booking.operatingMessage}</small></p>` : ''}
-        </div>
-      `;
-    }
-  } catch (err) {
-    if (resultEl) {
-      resultEl.innerHTML = `<p style="color: #dc2626;">Error de conexión al consultar la reserva.</p>`;
-    }
-  }
-}
-window.lookupBooking = lookupBooking;
+        const departureFormatted = cleanDateTime(booking.departureTime);
+        const arrivalFormatted = cleanDateTime(booking.arrivalTime);
+        const createdFormatted = cleanDateTime(booking.createdAt);
 
-    async function loadMyTripsAndPoints() {
-  const bookingsEl = document.getElementById('myBookingsList');
-  const user = window.currentUser || currentUser;
-  const token = typeof getAuthToken === 'function' ? getAuthToken() : '';
+        const currency = booking.currency || 'COP';
+        const formatMoney = (val) => `${Number(val || 0).toLocaleString('es-CO')} ${currency}`;
+        const origin = booking.origin || booking.flight?.origin || booking.segments?.[0]?.origin || '';
+        const destination = booking.destination || booking.flight?.destination || booking.segments?.[0]?.destination || '';
+        const route = [origin, destination].filter(Boolean).join(' ➔ ') || 'Por confirmar';
 
-  if (typeof renderDetailedPointsHistory === 'function') {
-    renderDetailedPointsHistory();
-  }
-  if (!bookingsEl) return;
+        const extraRows = [
+          booking.airline || booking.flightNumber
+            ? `<p><strong>Aerolínea / Vuelo:</strong> ${[booking.airline, booking.flightNumber].filter(Boolean).join(' ')}</p>`
+            : '',
+          departureFormatted
+            ? `<p><strong>Salida:</strong> ${departureFormatted}</p>`
+            : '',
+          arrivalFormatted
+            ? `<p><strong>Llegada:</strong> ${arrivalFormatted}</p>`
+            : '',
+          booking.contactEmail
+            ? `<p><strong>Correo:</strong> ${booking.contactEmail}</p>`
+            : '',
+          createdFormatted
+            ? `<p><strong>Fecha de orden:</strong> ${createdFormatted}</p>`
+            : ''
+        ].filter(Boolean).join('');
 
-  if (!user || !token) {
-    bookingsEl.innerHTML = `
-      <div style="padding:14px; border:1px solid #E5E7EB; border-radius:12px; background:#F9FAFB;">
-        <p style="margin:0 0 8px 0; font-size:13px; color:#374151;">Inicia sesión para consultar tus viajes reservados y el detalle de tus puntos.</p>
-        <button type="button" onclick="openAuthModal()" style="padding:8px 14px; font-size:13px;">Iniciar sesión</button>
-      </div>
-    `;
-    return;
-  }
-
-  bookingsEl.innerHTML = '<p style="font-size:13px; color:#6B7280;">Cargando tus viajes...</p>';
-
-  const cleanDateTime = (raw) => {
-    const str = String(raw || '').trim();
-    if (!str) return '';
-    const fixed = str.replace(/^(\d{4}-\d{2}-\d{2}T)\1/, '$1');
-    const d = new Date(fixed);
-    return Number.isNaN(d.getTime())
-      ? fixed
-      : d.toLocaleString('es-CO', { dateStyle: 'medium', timeStyle: 'short' });
-  };
-
-  try {
-    const res = await fetch('/api/my-bookings', {
-      headers: { Authorization: `Bearer ${token}` }
-    });
-    const data = await res.json();
-
-    if (!res.ok || !data.success) {
-      bookingsEl.innerHTML = `<p style="font-size:13px; color:#DC2626;">${data.message || 'No se pudieron cargar tus reservas.'}</p>`;
-      return;
-    }
-
-    const rawBookings = Array.isArray(data.bookings) ? data.bookings : [];
-    const rawOrders = Array.isArray(data.orders) ? data.orders : [];
-    const seenCodes = new Set();
-    const bookings = [...rawOrders, ...rawBookings]
-      .filter((item) => {
-        const key = String(item?.orderCode || item?.pnr || item?.code || item?.id || '').trim().toUpperCase();
-        if (!key) return true;
-        if (seenCodes.has(key)) return false;
-        seenCodes.add(key);
-        return true;
-      })
-      .sort((a, b) => {
-        const ta = new Date(a?.createdAt || a?.updatedAt || 0).getTime() || 0;
-        const tb = new Date(b?.createdAt || b?.updatedAt || 0).getTime() || 0;
-        return tb - ta;
-      });
-
-    if (!bookings.length) {
-      bookingsEl.innerHTML = `
-        <div style="padding:14px; border:1px solid #E5E7EB; border-radius:12px; background:#F9FAFB;">
-          <h3 style="margin:0 0 6px 0; font-size:15px;">Mis viajes</h3>
-          <p style="margin:0; font-size:13px; color:#4B5563;">Todavía no tienes viajes asociados a tu cuenta. ¡Busca tu próxima ruta y empieza a sumar puntos!</p>
-        </div>
-      `;
-      return;
-    }
-
-    bookingsEl.innerHTML = `
-      <div style="padding:14px; border:1px solid #E5E7EB; border-radius:12px; background:#FFFFFF;">
-        <h3 style="margin:0 0 10px 0; font-size:15px;">Mis viajes (${bookings.length})</h3>
-        ${bookings.map(b => {
-          const details = b.details || {};
-          const pricing = b.pricing || {};
-          const firstPax = Array.isArray(b.passengers) && b.passengers[0] ? b.passengers[0] : null;
-          const paxName = b.passengerName
-            || (firstPax ? `${firstPax.firstName || ''} ${firstPax.lastName || ''}`.trim() : '')
-            || user.name;
-
-          const monto = Number(
-            b.finalAmount
-            ?? pricing.finalAmount
-            ?? pricing.totalAmount
-            ?? b.amount
-            ?? b.grossAmount
-            ?? pricing.grossAmount
-            ?? 0
-          );
-          const moneda = b.currency || pricing.currency || 'COP';
-          const earned = Number(b.pointsEarned || pricing.pointsEarned || 0);
-          const redeemed = Number(b.pointsRedeemed ?? pricing.pointsRedeemed ?? pricing.pointsToRedeem ?? 0);
-          const code = b.orderCode || b.pnr || b.code || b.id || 'N/A';
-          const origin = b.origin || details.origin || b.flight?.origin || b.segments?.[0]?.origin || '---';
-          const destination = b.destination || details.destination || b.flight?.destination || b.segments?.[0]?.destination || '---';
-          const flightInfo = [b.airline || details.airline, b.flightNumber || details.flightNumber].filter(Boolean).join(' ');
-          const departure = cleanDateTime(b.departureTime || details.departureTime);
-
-          return `
-            <div style="padding:10px 0; border-bottom:1px solid #F1F5F9; display:flex; justify-content:space-between; align-items:flex-start;gap:12px; font-size:13px;">
-              <div>
-                <div><strong>${origin} ➔ ${destination}</strong> · <span style="color:#DA291C; font-weight:600;">Código: ${code}</span>${flightInfo ? ` · <span style="color:#374151;">${flightInfo}</span>` : ''}</div>
-                <div style="font-size:12px; color:#4B5563; margin-top:2px;">
-                  Estado: <strong>${b.status || 'CONFIRMADO'}</strong> · Pago: ${b.paymentMethod || 'ADDI'} · Pasajero: ${paxName}
-                </div>
-                ${departure ? `<div style="font-size:11px; color:#6B7280; margin-top:2px;">Salida: ${departure}</div>` : ''}
-                <div style="font-size:11px; color:#6B7280; margin-top:2px;">
-                  Puntos ganados: <strong>+${earned} pts</strong>${redeemed > 0 ? ` · Canjeados: <strong>-${redeemed} pts</strong>` : ''}
-                </div>
-              </div>
-              <div style="text-align:right; white-space:nowrap;">
-                <strong>$ ${monto.toLocaleString('es-CO')} ${moneda}</strong>
-              </div>
+        if (resultEl) {
+          resultEl.innerHTML = `
+            <div class="booking-lookup-card">
+              <p><strong>Código:</strong> ${booking.orderCode || booking.pnr}</p>
+              <p><strong>Pasajero:</strong> ${booking.passengerName || 'Viajero'}</p>
+              <p><strong>Ruta:</strong> ${route}</p>
+              <p><strong>Estado:</strong> ${booking.status || 'pending_payment'}</p>
+              <p><strong>Método de pago:</strong> ${booking.paymentMethod || 'ADDI'}</p>
+              <p><strong>Valor bruto:</strong> ${formatMoney(booking.grossAmount ?? booking.finalAmount)}</p>
+              <p><strong>Descuento por puntos:</strong> -${formatMoney(booking.discountAmount || 0)} (${Number(booking.pointsRedeemed || 0)} pts)</p>
+              <p><strong>Total a pagar:</strong> ${formatMoney(booking.finalAmount ?? booking.amount)}</p>
+              <p><strong>Puntos ganados:</strong> +${Number(booking.pointsEarned || 0)} pts</p>
+              ${extraRows}
+              ${booking.operatingMessage ? `<p><small>${booking.operatingMessage}</small></p>` : ''}
             </div>
           `;
-        }).join('')}
-      </div>
-    `;
-  } catch (err) {
-    bookingsEl.innerHTML = '<p style="font-size:13px; color:#DC2626;">Error de conexión al consultar tus viajes.</p>';
-  }
-}
-window.loadMyTripsAndPoints = loadMyTripsAndPoints;
+        }
+      } catch (err) {
+        if (resultEl) {
+          resultEl.innerHTML = `<p style="color: #dc2626;">Error de conexión al consultar la reserva.</p>`;
+        }
+      }
+    }
+    window.lookupBooking = lookupBooking;
+
+    async function loadMyTripsAndPoints() {
+      const bookingsEl = document.getElementById('myBookingsList');
+      const user = window.currentUser || currentUser;
+      const token = typeof getAuthToken === 'function' ? getAuthToken() : '';
+
+      if (typeof renderDetailedPointsHistory === 'function') {
+        renderDetailedPointsHistory();
+      }
+      if (!bookingsEl) return;
+
+      if (!user || !token) {
+        bookingsEl.innerHTML = `
+          <div style="padding:14px; border:1px solid #E5E7EB; border-radius:12px; background:#F9FAFB;">
+            <p style="margin:0 0 8px 0; font-size:13px; color:#374151;">Inicia sesión para consultar tus viajes reservados y el detalle de tus puntos.</p>
+            <button type="button" onclick="openAuthModal()" style="padding:8px 14px; font-size:13px;">Iniciar sesión</button>
+          </div>
+        `;
+        return;
+      }
+
+      bookingsEl.innerHTML = '<p style="font-size:13px; color:#6B7280;">Cargando tus viajes...</p>';
+
+      const cleanDateTime = (raw) => {
+        const str = String(raw || '').trim();
+        if (!str) return '';
+        const fixed = str.replace(/^(\d{4}-\d{2}-\d{2}T)\1/, '$1');
+        const d = new Date(fixed);
+        return Number.isNaN(d.getTime())
+          ? fixed
+          : d.toLocaleString('es-CO', { dateStyle: 'medium', timeStyle: 'short' });
+      };
+
+      try {
+        const res = await fetch('/api/my-bookings', {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = await res.json();
+
+        if (!res.ok || !data.success) {
+          bookingsEl.innerHTML = `<p style="font-size:13px; color:#DC2626;">${data.message || 'No se pudieron cargar tus reservas.'}</p>`;
+          return;
+        }
+
+        const rawBookings = Array.isArray(data.bookings) ? data.bookings : [];
+        const rawOrders = Array.isArray(data.orders) ? data.orders : [];
+        const seenCodes = new Set();
+        const bookings = [...rawOrders, ...rawBookings]
+          .filter((item) => {
+            const key = String(item?.orderCode || item?.pnr || item?.code || item?.id || '').trim().toUpperCase();
+            if (!key) return true;
+            if (seenCodes.has(key)) return false;
+            seenCodes.add(key);
+            return true;
+          })
+          .sort((a, b) => {
+            const ta = new Date(a?.createdAt || a?.updatedAt || 0).getTime() || 0;
+            const tb = new Date(b?.createdAt || b?.updatedAt || 0).getTime() || 0;
+            return tb - ta;
+          });
+
+        if (!bookings.length) {
+          bookingsEl.innerHTML = `
+            <div style="padding:14px; border:1px solid #E5E7EB; border-radius:12px; background:#F9FAFB;">
+              <h3 style="margin:0 0 6px 0; font-size:15px;">Mis viajes</h3>
+              <p style="margin:0; font-size:13px; color:#4B5563;">Todavía no tienes viajes asociados a tu cuenta. ¡Busca tu próxima ruta y empieza a sumar puntos!</p>
+            </div>
+          `;
+          return;
+        }
+
+        bookingsEl.innerHTML = `
+          <div style="padding:14px; border:1px solid #E5E7EB; border-radius:12px; background:#FFFFFF;">
+            <h3 style="margin:0 0 10px 0; font-size:15px;">Mis viajes (${bookings.length})</h3>
+            ${bookings.map(b => {
+              const details = b.details || {};
+              const pricing = b.pricing || {};
+              const firstPax = Array.isArray(b.passengers) && b.passengers[0] ? b.passengers[0] : null;
+              const paxName = b.passengerName
+                || (firstPax ? `${firstPax.firstName || ''} ${firstPax.lastName || ''}`.trim() : '')
+                || user.name;
+
+              const monto = Number(
+                b.finalAmount
+                ?? pricing.finalAmount
+                ?? pricing.totalAmount
+                ?? b.amount
+                ?? b.grossAmount
+                ?? pricing.grossAmount
+                ?? 0
+              );
+              const moneda = b.currency || pricing.currency || 'COP';
+              const earned = Number(b.pointsEarned || pricing.pointsEarned || 0);
+              const redeemed = Number(b.pointsRedeemed ?? pricing.pointsRedeemed ?? pricing.pointsToRedeem ?? 0);
+              const code = b.orderCode || b.pnr || b.code || b.id || 'N/A';
+              const origin = b.origin || details.origin || b.flight?.origin || b.segments?.[0]?.origin || '---';
+              const destination = b.destination || details.destination || b.flight?.destination || b.segments?.[0]?.destination || '---';
+              const flightInfo = [b.airline || details.airline, b.flightNumber || details.flightNumber].filter(Boolean).join(' ');
+              const departure = cleanDateTime(b.departureTime || details.departureTime);
+
+              return `
+                <div style="padding:10px 0; border-bottom:1px solid #F1F5F9; display:flex; justify-content:space-between; align-items:flex-start;gap:12px; font-size:13px;">
+                  <div>
+                    <div><strong>${origin} ➔ ${destination}</strong> · <span style="color:#DA291C; font-weight:600;">Código: ${code}</span>${flightInfo ? ` · <span style="color:#374151;">${flightInfo}</span>` : ''}</div>
+                    <div style="font-size:12px; color:#4B5563; margin-top:2px;">
+                      Estado: <strong>${b.status || 'CONFIRMADO'}</strong> · Pago: ${b.paymentMethod || 'ADDI'} · Pasajero: ${paxName}
+                    </div>
+                    ${departure ? `<div style="font-size:11px; color:#6B7280; margin-top:2px;">Salida: ${departure}</div>` : ''}
+                    <div style="font-size:11px; color:#6B7280; margin-top:2px;">
+                      Puntos ganados: <strong>+${earned} pts</strong>${redeemed > 0 ? ` · Canjeados: <strong>-${redeemed} pts</strong>` : ''}
+                    </div>
+                  </div>
+                  <div style="text-align:right; white-space:nowrap;">
+                    <strong>$ ${monto.toLocaleString('es-CO')} ${moneda}</strong>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } catch (err) {
+        bookingsEl.innerHTML = '<p style="font-size:13px; color:#DC2626;">Error de conexión al consultar tus viajes.</p>';
+      }
+    }
+    window.loadMyTripsAndPoints = loadMyTripsAndPoints;
 
     function formatDuffelPrice(amount, currency = 'COP') {
       return new Intl.NumberFormat('es-CO', {
@@ -1955,317 +1955,335 @@ window.loadMyTripsAndPoints = loadMyTripsAndPoints;
     }
 
     function selectOfferDestination(cityOrIata, dateStr, returnDateStr = '') {
-  resetCheckoutSelection();
-  selectedDuffelOfferId = null;
+      if (typeof switchView === 'function') {
+        switchView('search');
+      }
+      resetCheckoutSelection();
+      selectedDuffelOfferId = null;
 
-  const originEl = document.getElementById('origin');
-  const destEl = document.getElementById('destination');
-  const dateEl = document.getElementById('departureDate');
-  const returnEl = document.getElementById('returnDate');
-  const tripTypeEl = document.getElementById('tripType');
+      const originEl = document.getElementById('origin');
+      const destEl = document.getElementById('destination');
+      const dateEl = document.getElementById('departureDate');
+      const returnEl = document.getElementById('returnDate');
+      const tripTypeEl = document.getElementById('tripType');
 
-  let rawValue = cityOrIata;
-  if (rawValue && typeof rawValue === 'object') {
-    const card = rawValue.currentTarget?.closest?.('.destination-card') || rawValue.target?.closest?.('.destination-card') || rawValue;
-    rawValue = card?.dataset?.destination || card?.dataset?.iata || card?.dataset?.city || '';
-    if (!dateStr && card?.dataset?.date) dateStr = card.dataset.date;
-    if (!returnDateStr && card?.dataset?.returnDate) returnDateStr = card.dataset.returnDate;
-  }
+      let rawValue = cityOrIata;
+      if (rawValue && typeof rawValue === 'object') {
+        const card = rawValue.currentTarget?.closest?.('.destination-card') || rawValue.target?.closest?.('.destination-card') || rawValue;
+        rawValue = card?.dataset?.destination || card?.dataset?.iata || card?.dataset?.city || '';
+        if (!dateStr && card?.dataset?.date) dateStr = card.dataset.date;
+        if (!returnDateStr && card?.dataset?.returnDate) returnDateStr = card.dataset.returnDate;
+      }
 
-  const clean = String(rawValue || '').trim().toUpperCase();
-  const iata = IATA_BY_CITY[clean] || clean;
+      const clean = String(rawValue || '').trim().toUpperCase();
+      const iata = (typeof IATA_BY_CITY !== 'undefined' && IATA_BY_CITY[clean]) || clean;
 
-  if (!iata) return;
+      if (!iata) return;
 
-  if (originEl && !originEl.value.trim()) originEl.value = 'BOG';
-  if (destEl) destEl.value = iata;
-  if (dateEl && dateStr) dateEl.value = dateStr;
-  if (tripTypeEl) tripTypeEl.value = returnDateStr ? 'roundtrip' : 'oneway';
-  if (returnEl) returnEl.value = returnDateStr || '';
-  syncTripTypeUI();
+      if (originEl && !originEl.value.trim()) originEl.value = 'BOG';
+      if (destEl) destEl.value = iata;
+      if (dateEl && dateStr) dateEl.value = dateStr;
+      if (tripTypeEl) tripTypeEl.value = returnDateStr ? 'roundtrip' : 'oneway';
+      if (returnEl) returnEl.value = returnDateStr || '';
+      if (typeof syncTripTypeUI === 'function') syncTripTypeUI();
 
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  searchFlights(null, returnDateStr || '');
-}
-window.selectOfferDestination = selectOfferDestination;
+      window._trayectiaFromOffer = true;
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      });
+
+      if (typeof searchFlights === 'function') {
+        searchFlights(null, returnDateStr || '');
+      }
+    }
+    window.selectOfferDestination = selectOfferDestination;
 
     async function fetchFlightsQuery(origin, destination, date, returnDate = '', extraState = null) {
-  const st = extraState || syncSearchStateFromDOM(returnDate);
-  const domReturnVal = document.getElementById('returnDate')?.value?.trim() || '';
-  const resolvedReturn = (returnDate || domReturnVal || '').trim();
-  const resolvedTripType = (st.tripType === 'roundtrip' || resolvedReturn) ? 'roundtrip' : 'oneway';
-  const effectiveReturnDate = resolvedTripType === 'roundtrip' ? resolvedReturn : '';
+      const st = extraState || syncSearchStateFromDOM(returnDate);
+      const domReturnVal = document.getElementById('returnDate')?.value?.trim() || '';
+      const resolvedReturn = (returnDate || domReturnVal || '').trim();
+      const resolvedTripType = (st.tripType === 'roundtrip' || resolvedReturn) ? 'roundtrip' : 'oneway';
+      const effectiveReturnDate = resolvedTripType === 'roundtrip' ? resolvedReturn : '';
 
-  const params = new URLSearchParams({
-    origin,
-    destination,
-    date,
-    departure_date: date,
-    tripType: resolvedTripType,
-    adults: String(st.adults ?? 1),
-    children: String(st.children ?? 0),
-    infants_in_seat: String(st.infants_in_seat ?? 0),
-    infants_on_lap: String(st.infants_on_lap ?? 0),
-    travelClass: String(st.travelClass ?? '1')
-  });
-
-  if (effectiveReturnDate) {
-    params.set('returnDate', effectiveReturnDate);
-    params.set('return_date', effectiveReturnDate);
-  }
-  if (st.stops !== '' && st.stops !== undefined && st.stops !== null) {
-    params.set('stops', String(st.stops));
-  }
-
-  const res = await fetch(`/api/flights/search?${params.toString()}`);
-  const data = await res.json();
-  const flights = Array.isArray(data.flights) ? data.flights : (Array.isArray(data.offers) ? data.offers : []);
-  return { res, data, flights };
-}
-    async function searchFlights(event, forcedReturnDate = '') {
-  if (event && typeof event.preventDefault === 'function') event.preventDefault();
-  resetCheckoutSelection();
-  syncSearchStateFromDOM(forcedReturnDate);
-
-  const originEl = document.getElementById('origin');
-  const destEl = document.getElementById('destination');
-  const dateEl = document.getElementById('departureDate');
-  const returnEl = document.getElementById('returnDate');
-  const tripTypeEl = document.getElementById('tripType');
-  const statusEl = document.getElementById('searchStatus');
-  const loaderBar = document.getElementById('vuelosLoadingBar');
-  const loaderRuta = document.getElementById('vuelosLoadingRuta');
-  const flightsListEl = document.getElementById('flightsList');
-  const resultsCard = document.getElementById('resultsCard');
-
-  const origin = originEl && originEl.value.trim() ? originEl.value.trim().toUpperCase() : 'BOG';
-  const rawDest = destEl ? destEl.value.trim().toUpperCase() : '';
-  const destination = IATA_BY_CITY[rawDest] || rawDest;
-  let date = dateEl ? dateEl.value : '';
-  const activeTripType = tripTypeEl ? tripTypeEl.value : (searchState.tripType || 'oneway');
-  const returnDate = activeTripType === 'roundtrip' ? (forcedReturnDate || (returnEl ? returnEl.value : '')) : '';
-
-  if (!destination) {
-    if (statusEl) statusEl.textContent = 'Selecciona o escribe un destino válido.';
-    return;
-  }
-  if (!date) {
-    date = getDefaultFutureDate(14);
-    if (dateEl) dateEl.value = date;
-  }
-
-  if (loaderRuta) loaderRuta.textContent = `Buscando rutas ${origin} ➔ ${destination}...`;
-  if (loaderBar) loaderBar.classList.add('activa');
-  if (statusEl) statusEl.textContent = returnDate ? 'Buscando tarifas de ida y vuelta...' : 'Buscando tarifas de solo ida...';
-
-  try {
-    let { res, data, flights } = await fetchFlightsQuery(origin, destination, date, returnDate);
-    let usedOneWayFallback = false;
-
-    if ((!res.ok || data.success === false || flights.length === 0) && returnDate) {
-      const fallback = await fetchFlightsQuery(origin, destination, date, '', { ...searchState, tripType: 'oneway' });
-      if (fallback.res.ok && fallback.data.success !== false && fallback.flights.length > 0) {
-        res = fallback.res;
-        data = fallback.data;
-        flights = fallback.flights;
-        usedOneWayFallback = true;
-      }
-    }
-
-    // Filtra estrictamente para que no se cuelen resultados fijos de otra ruta (como BOG -> CTG)
-    const exactRouteFlights = Array.isArray(flights)
-  ? flights.filter(f => {
-      const fOrig = String(f.origin || '').trim().toUpperCase();
-      const fDest = String(f.destination || f.dest || '').trim().toUpperCase();
-      return fOrig === origin && fDest === destination;
-    })
-  : [];
-
-    if (res.ok && (data.success !== false) && exactRouteFlights.length > 0) {
-      allOffers = exactRouteFlights;
-      populateAirlineFilter(allOffers);
-      applyFilters();
-
-      if (resultsCard) {
-        resultsCard.classList.remove('hidden');
-        resultsCard.scrollIntoView({ behavior: 'smooth' });
-      }
-      if (statusEl) {
-        const totalPax = (searchState.adults || 1) + (searchState.children || 0) + (searchState.infants_in_seat || 0) + (searchState.infants_on_lap || 0);
-        const cabinText = data.cabin ? ` · ${data.cabin}` : '';
-        const paxText = totalPax > 1 ? ` · ${totalPax} pasajeros` : '';
-        statusEl.textContent = usedOneWayFallback
-          ? `Se encontraron ${allOffers.length} opciones para ${origin} ➔ ${destination} (solo ida)${paxText}${cabinText}.`
-          : `Se encontraron ${allOffers.length} opciones de vuelo para ${origin} ➔ ${destination}${paxText}${cabinText}.`;
-      }
-    } else {
-      allOffers = [];
-      if (flightsListEl) {
-        flightsListEl.innerHTML = `<p style="text-align:center; color:var(--text-light); padding:20px;">No hay vuelos disponibles para ${origin} ➔ ${destination} en la fecha seleccionada.</p>`;
-      }
-      if (resultsCard) resultsCard.classList.remove('hidden');
-      if (statusEl) statusEl.textContent = `Sin vuelos reales para ${origin} ➔ ${destination} en ${date}.`;
-    }
-  } catch (e) {
-    allOffers = [];
-    if (statusEl) statusEl.textContent = 'Error conectando con el servidor local.';
-    if (resultsCard) resultsCard.classList.add('hidden');
-  } finally {
-    if (loaderBar) loaderBar.classList.remove('activa');
-  }
-}
-window.searchFlights = searchFlights;
-
-
-    function aplicarOfertasEnTarjetas(offers = []) {
-  const cards = document.querySelectorAll('#destinationsGrid .destination-card');
-  const lista = Array.isArray(offers) ? offers : [];
-
-  cards.forEach(card => {
-    const origin = (card.dataset.origin || '').trim().toUpperCase();
-    const destination = (card.dataset.destination || '').trim().toUpperCase();
-    const date = (card.dataset.date || '').trim();
-    const labelEl = card.querySelector('.offer-label');
-    const amountEl = card.querySelector('.offer-amount');
-    const badgeEl = card.querySelector('.destination-badge');
-
-    if (labelEl) labelEl.textContent = 'Precios desde';
-
-    if (!origin || !destination) {
-      if (amountEl) amountEl.textContent = 'Ver vuelos';
-      return;
-    }
-
-    // Prioriza coincidencia exacta de origen + destino + fecha; si no, origen + destino
-    const match =
-      lista.find(o => {
-        if (!o || typeof o !== 'object') return false;
-        const oOrig = String(o.origin || o.from || '').trim().toUpperCase();
-        const oDest = String(o.destination || o.to || '').trim().toUpperCase();
-        const oDate = String(o.departureDate || o.date || '').slice(0, 10);
-        return oOrig === origin && oDest === destination && (!date || oDate === date);
-      }) ||
-      lista.find(o => {
-        if (!o || typeof o !== 'object') return false;
-        const oOrig = String(o.origin || o.from || '').trim().toUpperCase();
-        const oDest = String(o.destination || o.to || '').trim().toUpperCase();
-        return oOrig === origin && oDest === destination;
-      });
-
-    const rawMonto = match ? Number(match.totalAmount ?? match.price ?? match.total_amount ?? 0) : 0;
-    const moneda = match ? String(match.currency || match.total_currency || 'COP').trim().toUpperCase() : 'COP';
-
-    if (match && Number.isFinite(rawMonto) && rawMonto > 0 && amountEl) {
-      amountEl.textContent = formatDuffelPrice(rawMonto, moneda);
-      const aerolinea = String(match.airlineName || match.airline || match.owner?.name || '').trim();
-      if (badgeEl && aerolinea) {
-        const esSoloIda = match.tripType === 'ONE_WAY' || match.tripType === 'oneway';
-        badgeEl.textContent = esSoloIda ? `${aerolinea} · Solo ida` : `${aerolinea} · Ida y vuelta`;
-      }
-    } else if (amountEl) {
-      amountEl.textContent = 'Ver vuelos';
-    }
-  });
-}
-function readCachedDestinationsOffers() {
-  try {
-    const raw = localStorage.getItem(DESTINATIONS_CACHE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw);
-    if (!parsed || !Array.isArray(parsed.offers) || !parsed.savedAt) return null;
-    if (Date.now() - Number(parsed.savedAt) > DESTINATIONS_CACHE_TTL_MS) return null;
-    return parsed.offers;
-  } catch (_) {
-    return null;
-  }
-}
-
-function writeCachedDestinationsOffers(offers) {
-  try {
-    localStorage.setItem(DESTINATIONS_CACHE_KEY, JSON.stringify({ savedAt: Date.now(), offers }));
-  } catch (_) {}
-}
-
-async function loadCheapDuffelDestinations(forceRefresh = false) {
-  const cards = document.querySelectorAll('#destinationsGrid .destination-card');
-  if (!cards.length) return;
-
-  if (!forceRefresh) {
-    const cached = readCachedDestinationsOffers();
-    if (cached && cached.length > 0) {
-      aplicarOfertasEnTarjetas(cached);
-      return;
-    }
-  }
-
-  try {
-    const res = await fetch('/api/destinos-ofertas?roundTrip=true');
-    if (res.ok) {
-      const data = await res.json();
-      const listaEndpoint = Array.isArray(data.offers)
-        ? data.offers
-        : Array.isArray(data.ofertas)
-          ? data.ofertas
-          : [];
-      const limpias = listaEndpoint.filter(item => {
-        const m = Number(item?.totalAmount ?? item?.price ?? item?.total_amount ?? 0);
-        return item && item.origin && item.destination && Number.isFinite(m) && m > 0;
-      });
-      if (data.success && limpias.length > 0) {
-        writeCachedDestinationsOffers(limpias);
-        aplicarOfertasEnTarjetas(limpias);
-        return;
-      }
-    }
-  } catch (_) {}
-
-  const encontradas = [];
-  for (const card of Array.from(cards)) {
-    const origin = (card.dataset.origin || '').trim().toUpperCase();
-    const destination = (card.dataset.destination || '').trim().toUpperCase();
-    const date = (card.dataset.date || '').trim();
-    const returnDate = (card.dataset.returnDate || '').trim();
-    if (!origin || !destination || !date) continue;
-
-    try {
-      let tripType = returnDate ? 'ROUND_TRIP' : 'ONE_WAY';
-      let { res: r, flights: list } = await fetchFlightsQuery(origin, destination, date, returnDate);
-      if (r.status === 429) break;
-      if (!list.length && returnDate) {
-        tripType = 'ONE_WAY';
-        const soloIda = await fetchFlightsQuery(origin, destination, date, '');
-        r = soloIda.res;
-        list = soloIda.flights;
-        if (r.status === 429) break;
-      }
-      if (!r.ok || !list.length) continue;
-
-      const validas = list
-        .map(f => ({ ...f, _precio: Number(f.price ?? f.total_amount ?? 0) }))
-        .filter(f => Number.isFinite(f._precio) && f._precio > 0)
-        .sort((a, b) => a._precio - b._precio);
-
-      if (!validas.length) continue;
-      const cheapest = validas[0];
-
-      encontradas.push({
+      const params = new URLSearchParams({
         origin,
         destination,
-        departureDate: date,
-        returnDate: tripType === 'ROUND_TRIP' ? returnDate : '',
-        tripType,
-        totalAmount: cheapest._precio,
-        currency: cheapest.currency || cheapest.total_currency || 'COP',
-        airlineName: cheapest.airline || cheapest.owner?.name || 'Trayectia'
+        date,
+        departure_date: date,
+        tripType: resolvedTripType,
+        adults: String(st.adults ?? 1),
+        children: String(st.children ?? 0),
+        infants_in_seat: String(st.infants_in_seat ?? 0),
+        infants_on_lap: String(st.infants_on_lap ?? 0),
+        travelClass: String(st.travelClass ?? '1')
       });
-    } catch (_) {}
-  }
 
-  if (encontradas.length > 0) {
-    writeCachedDestinationsOffers(encontradas);
-  }
-  aplicarOfertasEnTarjetas(encontradas);
-}
+      if (effectiveReturnDate) {
+        params.set('returnDate', effectiveReturnDate);
+        params.set('return_date', effectiveReturnDate);
+      }
+      if (st.stops !== '' && st.stops !== undefined && st.stops !== null) {
+        params.set('stops', String(st.stops));
+      }
+
+      const res = await fetch(`/api/flights/search?${params.toString()}`);
+      const data = await res.json();
+      const flights = Array.isArray(data.flights) ? data.flights : (Array.isArray(data.offers) ? data.offers : []);
+      return { res, data, flights };
+    }
+
+    async function searchFlights(event, forcedReturnDate = '') {
+      if (event && typeof event.preventDefault === 'function') event.preventDefault();
+      const fromOffer = !event && Boolean(forcedReturnDate || window._trayectiaFromOffer);
+      window._trayectiaFromOffer = false;
+
+      resetCheckoutSelection();
+      syncSearchStateFromDOM(forcedReturnDate);
+
+      const originEl = document.getElementById('origin');
+      const destEl = document.getElementById('destination');
+      const dateEl = document.getElementById('departureDate');
+      const returnEl = document.getElementById('returnDate');
+      const tripTypeEl = document.getElementById('tripType');
+      const statusEl = document.getElementById('searchStatus');
+      const loaderBar = document.getElementById('vuelosLoadingBar');
+      const loaderRuta = document.getElementById('vuelosLoadingRuta');
+      const flightsListEl = document.getElementById('flightsList');
+      const resultsCard = document.getElementById('resultsCard');
+
+      const origin = originEl && originEl.value.trim() ? originEl.value.trim().toUpperCase() : 'BOG';
+      const rawDest = destEl ? destEl.value.trim().toUpperCase() : '';
+      const destination = IATA_BY_CITY[rawDest] || rawDest;
+      let date = dateEl ? dateEl.value : '';
+      const activeTripType = tripTypeEl ? tripTypeEl.value : (searchState.tripType || 'oneway');
+      const returnDate = activeTripType === 'roundtrip' ? (forcedReturnDate || (returnEl ? returnEl.value : '')) : '';
+
+      if (!destination) {
+        if (statusEl) statusEl.textContent = 'Selecciona o escribe un destino válido.';
+        return;
+      }
+      if (!date) {
+        date = getDefaultFutureDate(14);
+        if (dateEl) dateEl.value = date;
+      }
+
+      if (loaderRuta) loaderRuta.textContent = `Buscando rutas ${origin} ➔ ${destination}...`;
+      if (loaderBar) loaderBar.classList.add('activa');
+      if (statusEl) statusEl.textContent = returnDate ? 'Buscando tarifas de ida y vuelta...' : 'Buscando tarifas de solo ida...';
+
+      try {
+        let { res, data, flights } = await fetchFlightsQuery(origin, destination, date, returnDate);
+        let usedOneWayFallback = false;
+
+        if ((!res.ok || data.success === false || flights.length === 0) && returnDate) {
+          const fallback = await fetchFlightsQuery(origin, destination, date, '', { ...searchState, tripType: 'oneway' });
+          if (fallback.res.ok && fallback.data.success !== false && fallback.flights.length > 0) {
+            res = fallback.res;
+            data = fallback.data;
+            flights = fallback.flights;
+            usedOneWayFallback = true;
+          }
+        }
+
+        const exactRouteFlights = Array.isArray(flights)
+          ? flights.filter(f => {
+              const fOrig = String(f.origin || '').trim().toUpperCase();
+              const fDest = String(f.destination || f.dest || '').trim().toUpperCase();
+              return fOrig === origin && fDest === destination;
+            })
+          : [];
+
+        if (res.ok && (data.success !== false) && exactRouteFlights.length > 0) {
+          allOffers = exactRouteFlights;
+          populateAirlineFilter(allOffers);
+          applyFilters();
+
+          if (resultsCard) {
+            resultsCard.classList.remove('hidden');
+            if (!fromOffer) {
+              resultsCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }
+          }
+          if (statusEl) {
+            const totalPax = (searchState.adults || 1) + (searchState.children || 0) + (searchState.infants_in_seat || 0) + (searchState.infants_on_lap || 0);
+            const cabinText = data.cabin ? ` · ${data.cabin}` : '';
+            const paxText = totalPax > 1 ? ` · ${totalPax} pasajeros` : '';
+            statusEl.textContent = usedOneWayFallback
+              ? `Se encontraron ${allOffers.length} opciones para ${origin} ➔ ${destination} (solo ida)${paxText}${cabinText}.`
+              : `Se encontraron ${allOffers.length} opciones de vuelo para ${origin} ➔ ${destination}${paxText}${cabinText}.`;
+          }
+        } else {
+          allOffers = [];
+          if (flightsListEl) {
+            flightsListEl.innerHTML = `<p style="text-align:center; color:var(--text-light); padding:20px;">No hay vuelos disponibles para ${origin} ➔ ${destination} en la fecha seleccionada.</p>`;
+          }
+          if (resultsCard) resultsCard.classList.remove('hidden');
+          if (statusEl) statusEl.textContent = `Sin vuelos reales para ${origin} ➔ ${destination} en ${date}.`;
+        }
+      } catch (e) {
+        allOffers = [];
+        if (statusEl) statusEl.textContent = 'Error conectando con el servidor local.';
+        if (resultsCard) resultsCard.classList.add('hidden');
+      } finally {
+        if (loaderBar) loaderBar.classList.remove('activa');
+      }
+    }
+    window.searchFlights = searchFlights;
+
+    function aplicarOfertasEnTarjetas(offers = []) {
+      const cards = document.querySelectorAll('#destinationsGrid .destination-card');
+      const lista = Array.isArray(offers) ? offers : [];
+
+      cards.forEach(card => {
+        const origin = (card.dataset.origin || '').trim().toUpperCase();
+        const destination = (card.dataset.destination || '').trim().toUpperCase();
+        const date = (card.dataset.date || '').trim();
+        const labelEl = card.querySelector('.offer-label');
+        const amountEl = card.querySelector('.offer-amount');
+        const badgeEl = card.querySelector('.destination-badge');
+
+        if (labelEl) labelEl.textContent = 'Precios desde';
+
+        if (!origin || !destination) {
+          if (amountEl) amountEl.textContent = 'Ver vuelos';
+          return;
+        }
+
+        const match =
+          lista.find(o => {
+            if (!o || typeof o !== 'object') return false;
+            const oOrig = String(o.origin || o.from || '').trim().toUpperCase();
+            const oDest = String(o.destination || o.to || '').trim().toUpperCase();
+            const oDate = String(o.departureDate || o.date || '').slice(0, 10);
+            return oOrig === origin && oDest === destination && (!date || oDate === date);
+          }) ||
+          lista.find(o => {
+            if (!o || typeof o !== 'object') return false;
+            const oOrig = String(o.origin || o.from || '').trim().toUpperCase();
+            const oDest = String(o.destination || o.to || '').trim().toUpperCase();
+            return oOrig === origin && oDest === destination;
+          });
+
+        const rawMonto = match ? Number(match.totalAmount ?? match.price ?? match.total_amount ?? 0) : 0;
+        const moneda = match ? String(match.currency || match.total_currency || 'COP').trim().toUpperCase() : 'COP';
+
+        if (match && Number.isFinite(rawMonto) && rawMonto > 0 && amountEl) {
+          amountEl.textContent = formatDuffelPrice(rawMonto, moneda);
+          const aerolinea = String(match.airlineName || match.airline || match.owner?.name || '').trim();
+          if (badgeEl && aerolinea) {
+            const esSoloIda = match.tripType === 'ONE_WAY' || match.tripType === 'oneway';
+            badgeEl.textContent = esSoloIda ? `${aerolinea} · Solo ida` : `${aerolinea} · Ida y vuelta`;
+          }
+        } else if (amountEl) {
+          amountEl.textContent = 'Ver vuelos';
+        }
+      });
+    }
+
+    function readCachedDestinationsOffers() {
+      try {
+        const raw = localStorage.getItem(DESTINATIONS_CACHE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed || !Array.isArray(parsed.offers) || !parsed.savedAt) return null;
+        if (Date.now() - Number(parsed.savedAt) > DESTINATIONS_CACHE_TTL_MS) return null;
+        return parsed.offers;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function writeCachedDestinationsOffers(offers) {
+      try {
+        localStorage.setItem(DESTINATIONS_CACHE_KEY, JSON.stringify({ savedAt: Date.now(), offers }));
+      } catch (_) {}
+    }
+
+    async function loadCheapDuffelDestinations(forceRefresh = false) {
+      const cards = document.querySelectorAll('#destinationsGrid .destination-card');
+      if (!cards.length) return;
+
+      if (!forceRefresh) {
+        const cached = readCachedDestinationsOffers();
+        if (cached && cached.length > 0) {
+          aplicarOfertasEnTarjetas(cached);
+          return;
+        }
+      }
+
+      try {
+        const res = await fetch('/api/destinos-ofertas?roundTrip=true');
+        if (res.ok) {
+          const data = await res.json();
+          const listaEndpoint = Array.isArray(data.offers)
+            ? data.offers
+            : Array.isArray(data.ofertas)
+              ? data.ofertas
+              : [];
+          const limpias = listaEndpoint.filter(item => {
+            const m = Number(item?.totalAmount ?? item?.price ?? item?.total_amount ?? 0);
+            return item && item.origin && item.destination && Number.isFinite(m) && m > 0;
+          });
+          if (data.success && limpias.length > 0) {
+            writeCachedDestinationsOffers(limpias);
+            aplicarOfertasEnTarjetas(limpias);
+            return;
+          }
+        }
+      } catch (_) {}
+
+      const encontradas = [];
+      for (const card of Array.from(cards)) {
+        const origin = (card.dataset.origin || '').trim().toUpperCase();
+        const destination = (card.dataset.destination || '').trim().toUpperCase();
+        const date = (card.dataset.date || '').trim();
+        const returnDate = (card.dataset.returnDate || '').trim();
+        if (!origin || !destination || !date) continue;
+
+        try {
+          let tripType = returnDate ? 'ROUND_TRIP' : 'ONE_WAY';
+          let { res: r, flights: list } = await fetchFlightsQuery(origin, destination, date, returnDate);
+          if (r.status === 429) break;
+          if (!list.length && returnDate) {
+            tripType = 'ONE_WAY';
+            const soloIda = await fetchFlightsQuery(origin, destination, date, '');
+            r = soloIda.res;
+            list = soloIda.flights;
+            if (r.status === 429) break;
+          }
+          if (!r.ok || !list.length) continue;
+
+          const validas = list
+            .map(f => ({ ...f, _precio: Number(f.price ?? f.total_amount ?? 0) }))
+            .filter(f => Number.isFinite(f._precio) && f._precio > 0)
+            .sort((a, b) => a._precio - b._precio);
+
+          if (!validas.length) continue;
+          const cheapest = validas[0];
+
+          encontradas.push({
+            origin,
+            destination,
+            departureDate: date,
+            returnDate: tripType === 'ROUND_TRIP' ? returnDate : '',
+            tripType,
+            totalAmount: cheapest._precio,
+            currency: cheapest.currency || cheapest.total_currency || 'COP',
+            airlineName: cheapest.airline || cheapest.owner?.name || 'Trayectia'
+          });
+        } catch (_) {}
+      }
+
+      if (encontradas.length > 0) {
+        writeCachedDestinationsOffers(encontradas);
+      }
+      aplicarOfertasEnTarjetas(encontradas);
+    }
 
     function populateAirlineFilter(flights) {
       const select = document.getElementById('filterAirline');
@@ -2411,7 +2429,6 @@ async function loadCheapDuffelDestinations(forceRefresh = false) {
     }
 
     function showBookingConfirmationModal({ pnr, pointsEarned = 0, emailSent = false, email = '' }) {
-      window.scrollTo({ top: 0, behavior: 'instant' });
       const modal = document.getElementById('successModal');
       if (!modal) {
         alert(`Reserva confirmada · PNR: ${pnr} · Puntos: +${pointsEarned}`);
@@ -2459,19 +2476,19 @@ async function loadCheapDuffelDestinations(forceRefresh = false) {
     }
 
     function getMaxRedeemablePoints() {
-  const user = window.currentUser || currentUser;
-  if (!user || !selectedOffer) return 0;
+      const user = window.currentUser || currentUser;
+      if (!user || !selectedOffer) return 0;
 
-  const available = Math.max(0, Math.floor(Number(user.pointsBalance || 0)));
-  const price = Math.max(0, Number(selectedOffer.price || 0));
-  if (price <= 0 || available < MIN_POINTS_TO_REDEEM) return 0;
+      const available = Math.max(0, Math.floor(Number(user.pointsBalance || 0)));
+      const price = Math.max(0, Number(selectedOffer.price || 0));
+      if (price <= 0 || available < MIN_POINTS_TO_REDEEM) return 0;
 
-  const maxDiscountCop = Math.floor(price * MAX_POINTS_ORDER_RATIO);
-  const maxCapPoints = Math.floor(maxDiscountCop / POINT_VALUE_COP);
-  if (maxCapPoints < MIN_POINTS_TO_REDEEM) return 0;
+      const maxDiscountCop = Math.floor(price * MAX_POINTS_ORDER_RATIO);
+      const maxCapPoints = Math.floor(maxDiscountCop / POINT_VALUE_COP);
+      if (maxCapPoints < MIN_POINTS_TO_REDEEM) return 0;
 
-  return Math.min(available, maxCapPoints);
-}
+      return Math.min(available, maxCapPoints);
+    }
 
     function refreshPointsRedeemUI() {
       const box = document.getElementById('pointsRedeemBox');
@@ -2550,8 +2567,6 @@ async function loadCheapDuffelDestinations(forceRefresh = false) {
       window._pendingOrderCodeAfterClose = options.orderCode
         ? String(options.orderCode).trim().toUpperCase()
         : "";
-
-      window.scrollTo({ top: 0, behavior: "smooth" });
 
       let modal = document.getElementById("trayectiaOrderModal");
       if (!modal) {
